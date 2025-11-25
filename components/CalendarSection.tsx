@@ -1,18 +1,11 @@
 import React from 'react';
 
-// ISTRUZIONI:
-// 1. Vai su calendar.google.com
-// 2. Impostazioni > Seleziona il tuo calendario
-// 3. Scorri fino a "Integra calendario" -> Copia l'ID calendario
-// 4. IMPORTANTE: In "Autorizzazioni di accesso", spunta "Rendi disponibile pubblicamente"
-// 5. Incolla l'ID qui sotto al posto della stringa di esempio.
-// Esempio ID: "mariorossi@gmail.com" oppure "c9...40group.calendar.google.com"
-
-const GOOGLE_CALENDAR_ID = "INSERISCI_QUI_IL_TUO_CALENDAR_ID"; 
+// L'ID del calendario viene caricato dalle variabili d'ambiente di Vercel (GOOGLE_CALENDAR_ID)
+const GOOGLE_CALENDAR_ID = process.env.GOOGLE_CALENDAR_ID;
 
 export const CalendarSection: React.FC = () => {
-  // Codifichiamo l'ID per gestire caratteri speciali (come @ o #) nell'URL
-  const encodedId = encodeURIComponent(GOOGLE_CALENDAR_ID);
+  // Se l'ID è definito, lo codifichiamo per l'URL, altrimenti stringa vuota
+  const encodedId = GOOGLE_CALENDAR_ID ? encodeURIComponent(GOOGLE_CALENDAR_ID) : "";
 
   return (
     <section id="calendar" className="py-20 bg-white">
@@ -27,9 +20,9 @@ export const CalendarSection: React.FC = () => {
 
         <div className="bg-white p-4 rounded-xl shadow-lg border border-gray-200">
           <div className="relative w-full overflow-hidden pt-[75%] sm:pt-[56.25%]">
-            {GOOGLE_CALENDAR_ID === "INSERISCI_QUI_IL_TUO_CALENDAR_ID" ? (
+            {!GOOGLE_CALENDAR_ID ? (
               <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-gray-100 text-gray-500">
-                <p>Configurazione Calendario mancante. Inserisci l'ID nel codice.</p>
+                <p>Calendario non configurato. Verifica le variabili d'ambiente (GOOGLE_CALENDAR_ID).</p>
               </div>
             ) : (
               <iframe

@@ -3,30 +3,23 @@ import React, { useState } from 'react';
 export const ContactSection: React.FC = () => {
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'submitted' | 'error'>('idle');
 
-  // ISTRUZIONI PER TELEGRAM:
-  // Inserire il link pubblico del bot (es. https://t.me/MioBot).
-  const TELEGRAM_LINK = "https://t.me/INSERISCI_QUI_IL_NOME_DEL_TUO_BOT";
-
-  // ISTRUZIONI PER IL FORM (EMAIL):
-  // 1. Vai su https://formspree.io/ (è gratis).
-  // 2. Crea un "New Form".
-  // 3. Copia l'URL che ti danno (es. https://formspree.io/f/xkdq....).
-  // 4. Incollalo qui sotto al posto di "https://formspree.io/f/YOUR_FORM_ID".
-  const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+  // Variabili caricate dall'ambiente (Vercel)
+  const TELEGRAM_LINK = process.env.TELEGRAM_LINK || "";
+  const FORMSPREE_ENDPOINT = process.env.FORMSPREE_ENDPOINT || "";
 
   const handleTelegramClick = (e: React.MouseEvent) => {
-    if (TELEGRAM_LINK.includes("INSERISCI_QUI")) {
+    if (!TELEGRAM_LINK) {
       e.preventDefault();
-      alert("⚠️ Configurazione Mancante\n\nDevi inserire il link del tuo bot Telegram nel file 'components/ContactSection.tsx' per far funzionare questo pulsante.");
+      alert("⚠️ Configurazione Mancante\n\nLink Telegram non trovato nelle variabili d'ambiente.");
     }
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Controllo di sicurezza: se l'utente non ha ancora configurato Formspree
-    if (FORMSPREE_ENDPOINT.includes("YOUR_FORM_ID")) {
-      alert("⚠️ Configurazione Mancante\n\nPer ricevere le email, devi creare un form su Formspree.io e incollare l'URL nel file 'components/ContactSection.tsx' alla riga 'const FORMSPREE_ENDPOINT'.");
+    // Controllo di sicurezza
+    if (!FORMSPREE_ENDPOINT) {
+      alert("⚠️ Configurazione Mancante\n\nEndpoint Formspree non trovato nelle variabili d'ambiente.");
       return;
     }
 
@@ -135,7 +128,7 @@ export const ContactSection: React.FC = () => {
             ) : formStatus === 'error' ? (
               <div className="bg-red-50 text-red-700 p-4 rounded-lg text-center border border-red-200 mb-6">
                 <p className="font-bold">Errore nell'invio.</p>
-                <p className="text-sm">Assicurati di aver configurato l'ID Formspree nel codice o riprova più tardi.</p>
+                <p className="text-sm">Assicurati che la configurazione Formspree sia corretta e riprova.</p>
                 <button 
                   onClick={() => setFormStatus('idle')}
                   className="mt-2 text-sm underline hover:text-red-800"

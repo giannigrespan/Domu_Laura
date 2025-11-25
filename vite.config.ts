@@ -10,8 +10,11 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react()],
     define: {
-      // Expose process.env.API_KEY to the client-side code
-      'process.env.API_KEY': JSON.stringify(env.API_KEY)
+      // Expose environment variables to the client-side code
+      'process.env.API_KEY': JSON.stringify(env.API_KEY),
+      'process.env.GOOGLE_CALENDAR_ID': JSON.stringify(env.GOOGLE_CALENDAR_ID),
+      'process.env.TELEGRAM_LINK': JSON.stringify(env.TELEGRAM_LINK),
+      'process.env.FORMSPREE_ENDPOINT': JSON.stringify(env.FORMSPREE_ENDPOINT),
     }
   }
 })
