@@ -7,11 +7,11 @@ export const Hero: React.FC = () => {
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center"
         style={{ 
-          backgroundImage: 'url("https://picsum.photos/id/1036/1920/1080")', // Using a snowy mountain/nature placeholder, in real app use Sardinia photo
+          // Updated to a Mediterranean/Sardinia coastal vibe image
+          backgroundImage: 'url("https://images.unsplash.com/photo-1548805908-1c2eb2245b9b?q=80&w=2070&auto=format&fit=crop")',
           filter: 'brightness(0.6)'
         }}
       >
-        {/* Fallback description: Winter landscape placeholder, imagine a beautiful Sardinian view here */}
       </div>
 
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl">
