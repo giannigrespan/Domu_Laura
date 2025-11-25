@@ -61,7 +61,7 @@ export const Concierge: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-serif font-bold text-gray-900 mb-2">Concierge Virtuale</h2>
-          <p className="text-gray-600">Hai domande su Torpè o sui dintorni? Chiedi a Mauro, il nostro assistente AI.</p>
+          <p className="text-gray-600">Hai domande su Torpè o sui dintorni? Chiedi a Laura, il nostro assistente AI.</p>
         </div>
 
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 flex flex-col h-[500px]">
