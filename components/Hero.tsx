@@ -8,11 +8,8 @@ export const Hero: React.FC = () => {
         className="absolute inset-0 z-0 bg-cover bg-center"
         style={{ 
           // Updated to a Mediterranean/Sardinia coastal vibe image
-          backgroundImage: 'https://i.ibb.co/ccFfR1QT/ivan-ragozin-G5-MRCi0q-Rog-unsplash.jpg'
-
-
-          //backgroundImage: 'url("https://github.com/giannigrespan/torpenew/blob/5782c7db6392ab3f55ed24c80382f542279f1b05/components/images/images/ivan-ragozin-G5MRCi0qRog-unsplash.jpg?q=80&w=2070&auto=format&fit=crop")',
-          filter: 'brightness(0.6)'
+          backgroundImage: 'https://i.ibb.co/ccFfR1QT/ivan-ragozin-G5-MRCi0q-Rog-unsplash.jpg', filter: 'brightness(0.6)'
+    
         }}
       >
       </div>
