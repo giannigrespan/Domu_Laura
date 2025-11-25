@@ -7,14 +7,14 @@ export const ContactSection: React.FC = () => {
   // Inserire il link pubblico del bot (es. https://t.me/MioBot).
   // È SICURO: Questo è solo un link, come un link a Instagram. 
   // NON inserire mai il "Token" segreto del bot in questo file.
-  const TELEGRAM_LINK = "https://t.me/INSERISCI_QUI_IL_NOME_DEL_TUO_BOT";
+  const TELEGRAM_LINK = "https://t.me/myhouseinsardinia_bot";
 
   // ISTRUZIONI PER IL FORM (EMAIL):
   // 1. Vai su https://formspree.io/ (è gratis).
   // 2. Crea un "New Form".
   // 3. Copia l'URL che ti danno (es. https://formspree.io/f/xkdq....).
   // 4. Incollalo qui sotto al posto di "https://formspree.io/f/YOUR_FORM_ID".
-  const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/mvgnvzzl";
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
