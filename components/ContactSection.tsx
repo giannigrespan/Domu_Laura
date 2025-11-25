@@ -5,17 +5,17 @@ export const ContactSection: React.FC = () => {
 
   // ISTRUZIONI PER TELEGRAM:
   // Inserire il link pubblico del bot (es. https://t.me/MioBot).
-  const TELEGRAM_LINK = "https://t.me/INSERISCI_QUI_IL_NOME_DEL_TUO_BOT";
+  const TELEGRAM_LINK = "https://t.me/myhouseinsardinia_bot";
 
   // ISTRUZIONI PER IL FORM (EMAIL):
   // 1. Vai su https://formspree.io/ (è gratis).
   // 2. Crea un "New Form".
   // 3. Copia l'URL che ti danno (es. https://formspree.io/f/xkdq....).
   // 4. Incollalo qui sotto al posto di "https://formspree.io/f/YOUR_FORM_ID".
-  const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/mvgnvzzl";
 
   const handleTelegramClick = (e: React.MouseEvent) => {
-    if (TELEGRAM_LINK.includes("INSERISCI_QUI")) {
+    if (TELEGRAM_LINK.includes("https://t.me/myhouseinsardinia_bot")) {
       e.preventDefault();
       alert("⚠️ Configurazione Mancante\n\nDevi inserire il link del tuo bot Telegram nel file 'components/ContactSection.tsx' per far funzionare questo pulsante.");
     }
@@ -25,7 +25,7 @@ export const ContactSection: React.FC = () => {
     e.preventDefault();
 
     // Controllo di sicurezza: se l'utente non ha ancora configurato Formspree
-    if (FORMSPREE_ENDPOINT.includes("YOUR_FORM_ID")) {
+    if (FORMSPREE_ENDPOINT.includes("https://formspree.io/f/mvgnvzzl")) {
       alert("⚠️ Configurazione Mancante\n\nPer ricevere le email, devi creare un form su Formspree.io e incollare l'URL nel file 'components/ContactSection.tsx' alla riga 'const FORMSPREE_ENDPOINT'.");
       return;
     }
