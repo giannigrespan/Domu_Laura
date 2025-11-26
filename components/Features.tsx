@@ -81,12 +81,12 @@ export const Features: React.FC = () => {
             </div>
           ))}
         </div>
-        
-        {/* Simple Gallery Preview with updated Unsplash images suitable for a home */}
+
+        {/* Gallery con immagini locali */}
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <img src="https://images.unsplash.com/photo-1616594031246-e7e3f563a112?q=80&w=1000&auto=format&fit=crop" alt="Camera da letto luminosa" className="rounded-lg shadow-md hover:opacity-90 transition-opacity w-full object-cover h-64" />
-            <img src="https://images.unsplash.com/photo-1556910103-1c02745a30bf?q=80&w=1000&auto=format&fit=crop" alt="Cucina moderna" className="rounded-lg shadow-md hover:opacity-90 transition-opacity w-full object-cover h-64" />
-            <img src="https://images.unsplash.com/photo-1528189610214-722129e0c52f?q=80&w=1000&auto=format&fit=crop" alt="Vista panoramica colline" className="rounded-lg shadow-md hover:opacity-90 transition-opacity w-full object-cover h-64" />
+            <img src="/images/camera.jpg" alt="Camera da letto luminosa" className="rounded-lg shadow-md hover:opacity-90 transition-opacity w-full object-cover h-64" />
+            <img src="/images/cucina.jpg" alt="Cucina moderna" className="rounded-lg shadow-md hover:opacity-90 transition-opacity w-full object-cover h-64" />
+            <img src="/images/vista.jpg" alt="Vista panoramica colline" className="rounded-lg shadow-md hover:opacity-90 transition-opacity w-full object-cover h-64" />
         </div>
       </div>
     </section>
