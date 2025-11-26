@@ -37,13 +37,17 @@ export const CalendarSection: React.FC = () => {
       const firstDay = new Date(year, month, 1);
       const lastDay = new Date(year, month + 1, 0);
 
-      // Aggiungi giorni prima e dopo per completare le settimane
+      // Calcola il primo giorno da mostrare (lunedì della settimana del primo giorno del mese)
       const startDate = new Date(firstDay);
-      startDate.setDate(startDate.getDate() - ((startDate.getDay() + 6) % 7)); // Inizia da lunedì
+      const firstDayOfWeek = firstDay.getDay(); // 0 = domenica, 1 = lunedì, ...
+      const daysToSubtract = firstDayOfWeek === 0 ? 6 : firstDayOfWeek - 1; // Lunedì come primo giorno
+      startDate.setDate(firstDay.getDate() - daysToSubtract);
 
+      // Calcola l'ultimo giorno da mostrare (domenica della settimana dell'ultimo giorno del mese)
       const endDate = new Date(lastDay);
-      const daysToAdd = (7 - ((endDate.getDay() + 6) % 7)) % 7;
-      endDate.setDate(endDate.getDate() + daysToAdd);
+      const lastDayOfWeek = lastDay.getDay();
+      const daysToAdd = lastDayOfWeek === 0 ? 0 : 7 - lastDayOfWeek;
+      endDate.setDate(lastDay.getDate() + daysToAdd);
 
       // Fetch eventi da Google Calendar
       const timeMin = startDate.toISOString();

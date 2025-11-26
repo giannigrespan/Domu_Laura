@@ -30,7 +30,17 @@
       html {
         scroll-behavior: smooth;
       }
+      /* Previene auto-scroll indesiderato al caricamento */
+      body {
+        overflow-x: hidden;
+      }
     </style>
+    <script>
+      // Previene il ripristino automatico della posizione di scroll
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+    </script>
 <script type="importmap">
 {
   "imports": {
