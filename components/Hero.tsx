@@ -3,16 +3,11 @@ import React, { useState, useEffect } from 'react';
 export const Hero: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Array di immagini - Usa placeholder temporanei o carica le tue in /public/images/
+  // Array di immagini - carica le tue immagini in /public/images/
   const images = [
-    // Placeholder temporanei - sostituisci con le tue immagini caricandole in /public/images/
-    'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&h=1080&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920&h=1080&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1920&h=1080&fit=crop&q=80'
-    // Per usare le tue immagini, sostituisci con:
-    // '/images/slide1.jpg',
-    // '/images/slide2.jpg',
-    // '/images/slide3.jpg'
+    '/images/slide1.jpg',
+    '/images/slide2.jpg',
+    '/images/slide3.jpg'
   ];
 
   // Auto-scroll ogni 5 secondi
