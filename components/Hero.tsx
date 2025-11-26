@@ -4,8 +4,7 @@ export const Hero: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Array di immagini - Usa placeholder temporanei o carica le tue in /public/images/
-  const images = [
-         
+  const images = [       
     '/images/slide1.jpg',
     '/images/slide2.jpg',
     '/images/slide3.jpg'
