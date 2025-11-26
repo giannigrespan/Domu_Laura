@@ -79,9 +79,27 @@ export const CalendarSection: React.FC = () => {
 
       while (currentDateIter <= endDate) {
         const dateStr = currentDateIter.toISOString().split('T')[0];
+
+        // Controlla se il giorno corrente è occupato da almeno un evento
         const hasEvent = events.some((event: any) => {
-          const eventStart = event.start.date || event.start.dateTime?.split('T')[0];
-          return eventStart === dateStr;
+          // Data di inizio evento
+          const eventStartStr = event.start.date || event.start.dateTime?.split('T')[0];
+          const eventStart = new Date(eventStartStr);
+
+          // Data di fine evento
+          // Per eventi "all-day", la data di fine è esclusiva (es: evento 6-8 ha end = 9)
+          const eventEndStr = event.end.date || event.end.dateTime?.split('T')[0];
+          const eventEnd = new Date(eventEndStr);
+
+          // Per eventi all-day, sottrai un giorno dalla data di fine
+          if (event.start.date) {
+            eventEnd.setDate(eventEnd.getDate() - 1);
+          }
+
+          const currentDay = new Date(dateStr);
+
+          // Controlla se currentDay è compreso tra eventStart e eventEnd (inclusi)
+          return currentDay >= eventStart && currentDay <= eventEnd;
         });
 
         days.push({
