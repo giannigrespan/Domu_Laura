@@ -6,61 +6,25 @@ interface GalleryImage {
   category?: string;
 }
 
-// Array di immagini - Sostituisci con le tue foto reali
+// Array di immagini - Foto reali della casa
 const GALLERY_IMAGES: GalleryImage[] = [
   // Esterni
   {
-    url: '/images/gallery/esterno-1.jpg',
-    alt: 'Vista esterna dell\'appartamento',
+    url: '/images/gallery/terrazzo-1.webp',
+    alt: 'Terrazzo panoramico con vista',
     category: 'Esterni'
   },
   {
-    url: '/images/gallery/terrazzo-1.jpg',
-    alt: 'Terrazzo panoramico',
+    url: '/images/gallery/terrazzo-2.webp',
+    alt: 'Terrazzo attrezzato per pranzi all\'aperto',
     category: 'Esterni'
   },
-  {
-    url: '/images/gallery/vista-tramonto.jpg',
-    alt: 'Vista tramonto dal terrazzo',
-    category: 'Esterni'
-  },
-  
-  // Camere
-  {
-    url: '/images/gallery/camera-1.jpg',
-    alt: 'Camera da letto matrimoniale',
-    category: 'Camere'
-  },
-  {
-    url: '/images/gallery/camera-2.jpg',
-    alt: 'Seconda camera da letto',
-    category: 'Camere'
-  },
-  
-  // Cucina e Soggiorno
-  {
-    url: '/images/gallery/cucina-1.jpg',
-    alt: 'Cucina completamente attrezzata',
-    category: 'Cucina e Soggiorno'
-  },
-  {
-    url: '/images/gallery/soggiorno-1.jpg',
-    alt: 'Soggiorno luminoso',
-    category: 'Cucina e Soggiorno'
-  },
-  
+
   // Bagno
   {
-    url: '/images/gallery/bagno-1.jpg',
-    alt: 'Bagno moderno',
+    url: '/images/gallery/bagno-1.webp',
+    alt: 'Bagno con piastrelle in ceramica',
     category: 'Bagno'
-  },
-  
-  // Dettagli
-  {
-    url: '/images/gallery/dettaglio-1.jpg',
-    alt: 'Dettaglio arredamento',
-    category: 'Dettagli'
   }
 ];
 
