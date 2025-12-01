@@ -19,12 +19,7 @@ const GALLERY_IMAGES: GalleryImage[] = [
     alt: 'Terrazzo attrezzato per pranzi all\'aperto',
     category: 'Esterni'
   },
-  {
-    url: '/terrazzino-1.webp',
-    alt: 'Terrazzino coperto con zona pranzo',
-    category: 'Esterni'
-  },
-
+  
   // Camere
   {
     url: '/camera-1.webp',
