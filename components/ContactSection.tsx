@@ -75,7 +75,7 @@ export const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900">Indirizzo</h4>
-                  <p className="text-gray-600">Via Roma 123, 08020 Torpè (NU)</p>
+                  <p className="text-gray-600">Via Lombardia 7, 08020 Torpè (NU)</p>
                 </div>
               </div>
 
