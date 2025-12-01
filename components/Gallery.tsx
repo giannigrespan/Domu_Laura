@@ -10,7 +10,7 @@ interface GalleryImage {
 const GALLERY_IMAGES: GalleryImage[] = [
   // Esterni
   {
-    url: '/images/gallery/terrazzo-1.webp',
+    url: '/terrazzo-1.webp',
     alt: 'Terrazzo panoramico con vista',
     category: 'Esterni'
   },
@@ -27,26 +27,26 @@ const GALLERY_IMAGES: GalleryImage[] = [
 
   // Camere
   {
-    url: '/images/gallery/camera-1.webp',
+    url: '/camera-1.webp',
     alt: 'Camera da letto',
     category: 'Camere'
   },
 
   // Cucina e Soggiorno
   {
-    url: '/images/gallery/cucina-1.webp',
+    url: '/cucina-1.webp',
     alt: 'Cucina attrezzata',
     category: 'Cucina e Soggiorno'
   },
   {
-    url: '/images/gallery/cucina-2.webp',
+    url: '/cucina-2.webp',
     alt: 'Zona cucina con dettagli',
     category: 'Cucina e Soggiorno'
   },
 
   // Bagno
   {
-    url: '/images/gallery/bagno-1.webp',
+    url: '/bagno-1.webp',
     alt: 'Bagno con piastrelle in ceramica',
     category: 'Bagno'
   }
