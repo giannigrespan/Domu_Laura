@@ -19,6 +19,30 @@ const GALLERY_IMAGES: GalleryImage[] = [
     alt: 'Terrazzo attrezzato per pranzi all\'aperto',
     category: 'Esterni'
   },
+  {
+    url: '/images/gallery/terrazzino-1.webp',
+    alt: 'Terrazzino coperto con zona pranzo',
+    category: 'Esterni'
+  },
+
+  // Camere
+  {
+    url: '/images/gallery/camera-1.webp',
+    alt: 'Camera da letto',
+    category: 'Camere'
+  },
+
+  // Cucina e Soggiorno
+  {
+    url: '/images/gallery/cucina-1.webp',
+    alt: 'Cucina attrezzata',
+    category: 'Cucina e Soggiorno'
+  },
+  {
+    url: '/images/gallery/cucina-2.webp',
+    alt: 'Zona cucina con dettagli',
+    category: 'Cucina e Soggiorno'
+  },
 
   // Bagno
   {
