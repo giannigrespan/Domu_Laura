@@ -27,12 +27,12 @@ const GALLERY_IMAGES: GalleryImage[] = [
 
   // Camere
   {
-    url: '/camera-2.webp',
+    url: '/camera-2.png',
     alt: 'Camera da letto',
     category: 'Camere'
   },
  {
-    url: '/camera-3.webp',
+    url: '/camera-1.webp',
     alt: 'Camera da letto',
     category: 'Camere'
   },
