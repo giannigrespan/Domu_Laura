@@ -80,26 +80,87 @@ const fetchCalendarEvents = async (startDate: Date, endDate: Date): Promise<any[
 // Funzione per ottenere lo stato di disponibilità del calendario
 const getCalendarAvailability = async (): Promise<string> => {
   const today = new Date();
-  // Cerca disponibilità per i prossimi 6 mesi
+  // Cerca disponibilità per i prossimi 12 mesi (per prenotazioni anticipate)
   const futureDate = new Date();
-  futureDate.setMonth(today.getMonth() + 6);
+  futureDate.setMonth(today.getMonth() + 12);
 
   const events = await fetchCalendarEvents(today, futureDate);
 
   if (events.length === 0) {
-    return "INFORMAZIONI CALENDARIO: Nessun evento trovato nel calendario. Tutti i giorni potrebbero essere disponibili, ma conferma con il proprietario.";
+    return `INFORMAZIONI CALENDARIO: Nessun evento trovato nel calendario nei prossimi 12 mesi.
+TUTTI I PERIODI SONO LIBERI. Se l'utente chiede disponibilità, rispondi con entusiasmo che siamo disponibili per le date richieste e invitalo a procedere con la prenotazione.`;
   }
 
-  // Crea un riepilogo degli eventi
-  const eventSummary = events.map((event: any) => {
+  // Ordina gli eventi per data di inizio
+  const sortedEvents = events.sort((a: any, b: any) => {
+    const dateA = a.start.date || a.start.dateTime?.split('T')[0];
+    const dateB = b.start.date || b.start.dateTime?.split('T')[0];
+    return dateA.localeCompare(dateB);
+  });
+
+  // Crea un riepilogo degli eventi occupati
+  const occupiedPeriods = sortedEvents.map((event: any) => {
     const start = event.start.date || event.start.dateTime?.split('T')[0];
     const end = event.end.date || event.end.dateTime?.split('T')[0];
-    return `Dal ${start} al ${end}`;
+    // Per gli eventi all-day, l'end è esclusivo, quindi sottraiamo un giorno per la visualizzazione
+    const endDate = new Date(end);
+    endDate.setDate(endDate.getDate() - 1);
+    const endFormatted = endDate.toISOString().split('T')[0];
+    return `${start} - ${endFormatted}`;
   }).join(', ');
 
-  return `INFORMAZIONI CALENDARIO: Periodi occupati nei prossimi 6 mesi: ${eventSummary}.
-Quando un utente chiede disponibilità per date specifiche, controlla attentamente se le date richieste cadono in questi periodi occupati.
-Se anche solo un giorno del periodo richiesto è occupato, rispondi che non c'è disponibilità per quelle date.`;
+  // Calcola i periodi liberi tra gli eventi
+  const freePeriods: string[] = [];
+  const todayStr = today.toISOString().split('T')[0];
+
+  // Periodo libero prima del primo evento
+  const firstEventStart = sortedEvents[0].start.date || sortedEvents[0].start.dateTime?.split('T')[0];
+  if (todayStr < firstEventStart) {
+    const dayBefore = new Date(firstEventStart);
+    dayBefore.setDate(dayBefore.getDate() - 1);
+    freePeriods.push(`${todayStr} - ${dayBefore.toISOString().split('T')[0]}`);
+  }
+
+  // Periodi liberi tra gli eventi
+  for (let i = 0; i < sortedEvents.length - 1; i++) {
+    const currentEventEnd = sortedEvents[i].end.date || sortedEvents[i].end.dateTime?.split('T')[0];
+    const nextEventStart = sortedEvents[i + 1].start.date || sortedEvents[i + 1].start.dateTime?.split('T')[0];
+
+    // Se c'è un gap tra gli eventi
+    if (currentEventEnd < nextEventStart) {
+      const gapStart = currentEventEnd; // L'end è già il giorno dopo l'ultimo occupato
+      const gapEnd = new Date(nextEventStart);
+      gapEnd.setDate(gapEnd.getDate() - 1);
+      const gapEndStr = gapEnd.toISOString().split('T')[0];
+
+      // Solo se c'è almeno un giorno libero
+      if (gapStart <= gapEndStr) {
+        freePeriods.push(`${gapStart} - ${gapEndStr}`);
+      }
+    }
+  }
+
+  // Periodo libero dopo l'ultimo evento
+  const lastEventEnd = sortedEvents[sortedEvents.length - 1].end.date ||
+                       sortedEvents[sortedEvents.length - 1].end.dateTime?.split('T')[0];
+  const futureStr = futureDate.toISOString().split('T')[0];
+  if (lastEventEnd < futureStr) {
+    freePeriods.push(`${lastEventEnd} - ${futureStr}`);
+  }
+
+  let message = `INFORMAZIONI CALENDARIO:\n\n`;
+  message += `PERIODI OCCUPATI: ${occupiedPeriods}\n\n`;
+
+  if (freePeriods.length > 0) {
+    message += `PERIODI LIBERI: ${freePeriods.join(', ')}\n\n`;
+  }
+
+  message += `ISTRUZIONI:
+- Se l'utente chiede disponibilità per date specifiche, controlla se TUTTE le date richieste cadono in un periodo LIBERO.
+- Se SÌ: Rispondi con entusiasmo che siamo disponibili e invitalo a procedere con la prenotazione!
+- Se anche solo UN GIORNO cade in un periodo occupato: Spiega che quelle date non sono disponibili e suggerisci periodi liberi alternativi vicini alle date richieste.`;
+
+  return message;
 };
 
 export const sendMessageToConcierge = async (message: string): Promise<string> => {
