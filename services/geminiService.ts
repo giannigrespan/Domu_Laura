@@ -80,14 +80,14 @@ const fetchCalendarEvents = async (startDate: Date, endDate: Date): Promise<any[
 // Funzione per ottenere lo stato di disponibilità del calendario
 const getCalendarAvailability = async (): Promise<string> => {
   const today = new Date();
-  // Cerca disponibilità per i prossimi 6 mesi
+  // Cerca disponibilità per i prossimi 12 mesi (per prenotazioni anticipate)
   const futureDate = new Date();
-  futureDate.setMonth(today.getMonth() + 6);
+  futureDate.setMonth(today.getMonth() + 12);
 
   const events = await fetchCalendarEvents(today, futureDate);
 
   if (events.length === 0) {
-    return `INFORMAZIONI CALENDARIO: Nessun evento trovato nel calendario nei prossimi 6 mesi.
+    return `INFORMAZIONI CALENDARIO: Nessun evento trovato nel calendario nei prossimi 12 mesi.
 TUTTI I PERIODI SONO LIBERI. Se l'utente chiede disponibilità, rispondi con entusiasmo che siamo disponibili per le date richieste e invitalo a procedere con la prenotazione.`;
   }
 
