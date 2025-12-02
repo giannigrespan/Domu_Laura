@@ -1,0 +1,225 @@
+{
+  "common": {
+    "all": "Alle"
+  },
+  "navbar": {
+    "home": "Home",
+    "apartment": "Die Wohnung",
+    "gallery": "Galerie",
+    "excursions": "Ausflüge",
+    "availability": "Verfügbarkeit",
+    "assistant": "Persönlicher Assistent",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Deine Ecke des Friedens auf Sardinien",
+    "subtitle": "Entdecke die authentische Schönheit von Torpè. Nur wenige Minuten vom kristallklaren Meer von Posada entfernt, eingebettet in der Ruhe der Natur.",
+    "checkAvailability": "Verfügbarkeit prüfen",
+    "askAssistant": "Frag den Persönlichen Assistenten",
+    "previousImage": "Vorheriges Bild",
+    "nextImage": "Nächstes Bild",
+    "goToImage": "Zu Bild gehen"
+  },
+  "features": {
+    "title": "Unsere Services",
+    "subtitle": "Wir haben jedes Detail berücksichtigt, um Ihren Aufenthalt unvergesslich zu gestalten und kombinieren modernen Komfort mit authentischer sardischer Gastfreundschaft.",
+    "panoramicView": {
+      "title": "Panoramablick",
+      "description": "Genießen Sie spektakuläre Sonnenuntergänge über die Hügel und die Burg der Fava von der privaten Terrasse."
+    },
+    "airConditioning": {
+      "title": "Klimaanlage",
+      "description": "Frische und komfortable Räume in allen Zimmern für maximale Sommerrelaxation."
+    },
+    "wifi": {
+      "title": "Kostenloses Wi-Fi",
+      "description": "Hochgeschwindigkeitsverbindung zum Arbeiten im Homeoffice oder zum Streaming von Filmen."
+    },
+    "kitchen": {
+      "title": "Ausgestattete Küche",
+      "description": "Alles Notwendige, um köstliche Abendessen mit lokalen sardischen Produkten zuzubereiten."
+    },
+    "parking": {
+      "title": "Parkplatz",
+      "description": "Kostenlose private Parkplätze direkt vor der Unterkunft verfügbar."
+    },
+    "location": {
+      "title": "Strategische Lage",
+      "description": "Nur 5 Minuten von der Schnellstraße 131 DCN und 10 Minuten von den Stränden entfernt."
+    }
+  },
+  "gallery": {
+    "title": "Fotogalerie",
+    "subtitle": "Entdecken Sie jeden Winkel unserer Wohnung durch Fotos. Eine Vorschau des Komforts und der Schönheit, die auf Sie warten.",
+    "categories": {
+      "all": "Alle",
+      "exteriors": "Außenbereiche",
+      "bedrooms": "Schlafzimmer",
+      "kitchenLiving": "Küche und Wohnzimmer",
+      "bathroom": "Badezimmer"
+    },
+    "closeGallery": "Galerie schließen",
+    "previousImage": "Vorheriges Bild",
+    "nextImage": "Nächstes Bild",
+    "imageAlt": {
+      "terrace1": "Panoramaterrasse mit Aussicht",
+      "terrace2": "Ausgestattete Terrasse für Mahlzeiten im Freien",
+      "bedroom1": "Schlafzimmer",
+      "bedroom2": "Schlafzimmer",
+      "kitchen1": "Ausgestattete Küche",
+      "kitchen2": "Küchenbereich mit Details",
+      "bathroom": "Badezimmer mit Keramikfliesen"
+    }
+  },
+  "excursions": {
+    "title": "Ausflüge und Sehenswürdigkeiten",
+    "subtitle": "Entdecken Sie die Wunder der östlichen Sardinien. Paradiesische Strände, atemberaubende Berge und kulturelle Schätze warten nur wenige Kilometer entfernt.",
+    "categories": {
+      "all": "Alle",
+      "beaches": "Strände",
+      "natureMountain": "Natur und Berg",
+      "cultureHistory": "Kultur und Geschichte",
+      "activities": "Aktivitäten"
+    },
+    "excursionTips": "Tipps für Ihre Ausflüge",
+    "excursionTipsText": "Unser KI-Assistent <strong>Persönlicher Assistent</strong> kann Ihnen detaillierte Informationen zu Zeiten, Buchungen und personalisierten Tipps für jedes Ziel geben. Zögern Sie nicht, uns zu kontaktieren, um Ihr perfektes Erlebnis zu organisieren!",
+    "places": {
+      "calaGoloritze": {
+        "name": "Strand von Cala Goloritzè",
+        "description": "Der unberührte und wilde Cala Goloritzè, Wahrzeichen von Baunei, ist einer der Küstenabschnitte des Golfs von Orosei, wo Meer und Berg in perfekter Harmonie aufeinandertreffen."
+      },
+      "calaGinepro": {
+        "name": "Strand von Cala Ginepro",
+        "description": "Einer der schönsten Strände der Gegend mit feinem weißem Sand und kristallklarem Wasser. Ideal für Familien und Wassersport."
+      },
+      "berchida": {
+        "name": "Strand von Berchida",
+        "description": "Unberührter Strand umgeben von Dünen und Wacholder, perfekt für diejenigen, die Ruhe und unberührte Natur suchen."
+      },
+      "calaLiberotto": {
+        "name": "Cala Liberotto",
+        "description": "Kleine Bucht mit türkisblauem Wasser und malerischen Felsen. Ausgezeichnet zum Schnorcheln und Tauchen."
+      },
+      "orosei": {
+        "name": "Strand von Orosei",
+        "description": "Langer Goldstandstrand mit allen Einrichtungen, Restaurants und Strandbädern."
+      },
+      "monteAlbo": {
+        "name": "Monte Albo",
+        "description": "Kalksteinmassiv mit panoramischen Wegen und atemberaubendem Blick auf die Ostküste. Trekking verschiedener Schwierigkeitsstufen."
+      },
+      "grotteMonteAlbo": {
+        "name": "Höhlen von Monte Albo",
+        "description": "System von natürlichen Höhlen mit spektakulären Felsformationen. Geführte Besichtigungen verfügbar."
+      },
+      "forestaSosNibberos": {
+        "name": "Wald von Sos Nibberos",
+        "description": "Uralter Wald aus Eichen und Korkeichen, perfekt für naturkundliche Spaziergänge und Vogelbeobachtung."
+      },
+      "oroseiCentro": {
+        "name": "Historisches Zentrum von Orosei",
+        "description": "Mittelalterliches Dorf mit historischen Kirchen, charakteristischen Plätzen und traditioneller sardischer Architektur."
+      },
+      "nuragheLoelle": {
+        "name": "Nuraghe von Loelle",
+        "description": "Gut erhaltene archäologische Stätte aus der Nuraghen-Zeit, Zeugnis der antiken sardischen Zivilisation."
+      },
+      "chiesaSanPietro": {
+        "name": "Kirche San Pietro in Torpè",
+        "description": "Alte romanische Kirche aus dem 12. Jahrhundert mit Fresken und typischer Architektur der Periode."
+      },
+      "giroBarca": {
+        "name": "Bootsfahrt nach Cala Luna",
+        "description": "Bootsausflug zu den berühmten Buchten des Golfs von Orosei mit Möglichkeit zum Schnorcheln."
+      },
+      "gorropu": {
+        "name": "Trekking Gorropu-Schlucht",
+        "description": "Einer der tiefsten Canyons Europas. Ein unvergessliches Erlebnis für Trekking-Liebhaber."
+      }
+    }
+  },
+  "calendar": {
+    "title": "Verfügbarkeit prüfen",
+    "subtitle": "Konsultieren Sie den Kalender, um freie Tage zu sehen. Tage in Grün sind frei, Tage in Rot sind besetzt. Kontaktieren Sie uns direkt, um Ihre Reservierung zu bestätigen.",
+    "notConfigured": "Kalender nicht konfiguriert. Überprüfen Sie die Umgebungsvariablen (GOOGLE_CALENDAR_ID und GOOGLE_API_KEY).",
+    "previousMonth": "Vorheriger Monat",
+    "nextMonth": "Nächster Monat",
+    "loading": "Lädt...",
+    "noData": "Keine Daten verfügbar",
+    "available": "Frei",
+    "occupied": "Besetzt",
+    "disclaimer": "* Der Kalender wird regelmäßig aktualisiert. Für absolute Sicherheit senden Sie eine Anfrage.",
+    "months": {
+      "0": "Januar",
+      "1": "Februar",
+      "2": "März",
+      "3": "April",
+      "4": "Mai",
+      "5": "Juni",
+      "6": "Juli",
+      "7": "August",
+      "8": "September",
+      "9": "Oktober",
+      "10": "November",
+      "11": "Dezember"
+    },
+    "days": {
+      "mon": "Mo",
+      "tue": "Di",
+      "wed": "Mi",
+      "thu": "Do",
+      "fri": "Fr",
+      "sat": "Sa",
+      "sun": "So"
+    },
+    "errors": {
+      "notAccessible": "Der Kalender ist nicht zugänglich. Stellen Sie sicher, dass er öffentlich ist.",
+      "notFound": "Kalender nicht gefunden. Überprüfen Sie die Kalender-ID.",
+      "generic": "Fehler beim Laden des Kalenders. Bitte versuchen Sie es später erneut.",
+      "connection": "Verbindungsfehler. Überprüfen Sie die Konfiguration.",
+      "instructions": "Folgen Sie zum Beheben der Anleitung zur Konfiguration, die vom Support bereitgestellt wird."
+    }
+  },
+  "concierge": {
+    "title": "Persönlicher Assistent",
+    "subtitle": "Haben Sie Fragen zu Torpè oder der Umgebung? Fragen Sie Laura, unsere KI-Assistentin.",
+    "initialMessage": "Hallo! Ich bin Laura, Ihre virtuelle Assistentin für Casa Vacanze Torpè. Wie kann ich Ihnen heute helfen?",
+    "placeholder": "Fragen Sie: 'Welcher ist der nächste Strand?'...",
+    "send": "Senden",
+    "errorMessage": "Entschuldigung, ich hatte ein kleines Verbindungsproblem. Bitte versuchen Sie es später erneut."
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Wir stehen Ihnen für alle Informationen zur Verfügung. Buchen Sie jetzt Ihren Traumurlaub in Torpè.",
+    "address": "Adresse",
+    "addressValue": "Via Lombardia 7, 08020 Torpè (NU)",
+    "email": "E-Mail",
+    "emailValue": "torpe.holidayhome@gmail.com",
+    "whereWeAre": "Wo wir sind",
+    "telegramTitle": "Chatten Sie auf Telegram",
+    "telegramDescription": "Bevorzugen Sie eine sofortige Antwort? Schreiben Sie unserem Telegram-Bot für schnelle Informationen.",
+    "openTelegram": "Telegram-Chatbot öffnen",
+    "formTitle": "Senden Sie eine Anfrage",
+    "formSuccessTitle": "Nachricht erfolgreich gesendet!",
+    "formSuccessMessage": "Wir werden Ihnen per E-Mail so bald wie möglich antworten.",
+    "formErrorTitle": "Fehler beim Senden.",
+    "formErrorMessage": "Stellen Sie sicher, dass die Formspree-Konfiguration korrekt ist, und versuchen Sie es erneut.",
+    "retry": "Erneut versuchen",
+    "fullName": "Vollständiger Name",
+    "fullNamePlaceholder": "Mario Rossi",
+    "emailPlaceholder": "mario@example.com",
+    "checkin": "Check-in-Datum",
+    "checkout": "Check-out-Datum",
+    "message": "Nachricht",
+    "messagePlaceholder": "Anfragen, Notizen, Anzahl der Gäste...",
+    "submit": "Senden",
+    "submitting": "Wird gesendet...",
+    "configMissingTelegram": "⚠️ Konfiguration Fehlt\n\nTelegram-Link nicht in Umgebungsvariablen gefunden.",
+    "configMissingFormspree": "⚠️ Konfiguration Fehlt\n\nFormspree-Endpunkt nicht in Umgebungsvariablen gefunden."
+  },
+  "footer": {
+    "copyright": "© {{year}} Alle Rechte vorbehalten.",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Allgemeine Geschäftsbedingungen"
+  }
+}

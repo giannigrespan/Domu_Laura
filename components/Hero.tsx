@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export const Hero: React.FC = () => {
+  const { t } = useTranslation();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Array di immagini - Usa placeholder temporanei o carica le tue in /public/images/
@@ -51,7 +53,7 @@ export const Hero: React.FC = () => {
       <button
         onClick={prevSlide}
         className="absolute left-4 z-20 p-3 bg-white/20 hover:bg-white/30 backdrop-blur-md rounded-full transition-all"
-        aria-label="Immagine precedente"
+        aria-label={t('hero.previousImage')}
       >
         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -61,7 +63,7 @@ export const Hero: React.FC = () => {
       <button
         onClick={nextSlide}
         className="absolute right-4 z-20 p-3 bg-white/20 hover:bg-white/30 backdrop-blur-md rounded-full transition-all"
-        aria-label="Immagine successiva"
+        aria-label={t('hero.nextImage')}
       >
         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -71,23 +73,23 @@ export const Hero: React.FC = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-white mb-6 animate-fade-in-up">
-          Il tuo angolo di pace in Sardegna
+          {t('hero.title')}
         </h1>
         <p className="text-xl sm:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto font-light">
-          Scopri la bellezza autentica di Torpè. A pochi minuti dal mare cristallino di Posada, immerso nella tranquillità della natura.
+          {t('hero.subtitle')}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#calendar"
             className="px-8 py-3 bg-sardinia-sea hover:bg-sky-700 text-white font-semibold rounded-lg shadow-lg transition-all transform hover:scale-105"
           >
-            Verifica Disponibilità
+            {t('hero.checkAvailability')}
           </a>
           <a
             href="#concierge"
             className="px-8 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 font-semibold rounded-lg shadow-lg transition-all"
           >
-            Chiedi all'Assistente Personale
+            {t('hero.askAssistant')}
           </a>
         </div>
 
@@ -102,7 +104,7 @@ export const Hero: React.FC = () => {
                   ? 'w-8 bg-white'
                   : 'w-2 bg-white/50 hover:bg-white/75'
               }`}
-              aria-label={`Vai a immagine ${index + 1}`}
+              aria-label={`${t('hero.goToImage')} ${index + 1}`}
             />
           ))}
         </div>

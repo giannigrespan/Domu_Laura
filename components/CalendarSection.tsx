@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 // L'ID del calendario viene caricato dalle variabili d'ambiente di Vercel
 // Le variabili sono esposte tramite process.env attraverso vite.config.ts
@@ -12,6 +13,7 @@ interface CalendarDay {
 }
 
 export const CalendarSection: React.FC = () => {
+  const { t } = useTranslation();
   const [currentDate, setCurrentDate] = useState(new Date());
   const [calendarDays, setCalendarDays] = useState<CalendarDay[]>([]);
   const [loading, setLoading] = useState(true);
@@ -60,11 +62,11 @@ export const CalendarSection: React.FC = () => {
 
       if (!response.ok) {
         if (response.status === 403) {
-          setError('Il calendario non è accessibile. Assicurati che sia pubblico.');
+          setError(t('calendar.errors.notAccessible'));
         } else if (response.status === 404) {
-          setError('Calendario non trovato. Verifica l\'ID del calendario.');
+          setError(t('calendar.errors.notFound'));
         } else {
-          setError('Errore nel caricamento del calendario. Riprova più tardi.');
+          setError(t('calendar.errors.generic'));
         }
         setCalendarDays([]);
         return;
@@ -101,7 +103,7 @@ export const CalendarSection: React.FC = () => {
       setError(null);
     } catch (error) {
       console.error('Errore nel caricamento del calendario:', error);
-      setError('Errore di connessione. Verifica la configurazione.');
+      setError(t('calendar.errors.connection'));
       setCalendarDays([]);
     } finally {
       setLoading(false);
@@ -115,26 +117,43 @@ export const CalendarSection: React.FC = () => {
   };
 
   const monthNames = [
-    'Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno',
-    'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'
+    t('calendar.months.0'),
+    t('calendar.months.1'),
+    t('calendar.months.2'),
+    t('calendar.months.3'),
+    t('calendar.months.4'),
+    t('calendar.months.5'),
+    t('calendar.months.6'),
+    t('calendar.months.7'),
+    t('calendar.months.8'),
+    t('calendar.months.9'),
+    t('calendar.months.10'),
+    t('calendar.months.11')
   ];
 
-  const dayNames = ['Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab', 'Dom'];
+  const dayNames = [
+    t('calendar.days.mon'),
+    t('calendar.days.tue'),
+    t('calendar.days.wed'),
+    t('calendar.days.thu'),
+    t('calendar.days.fri'),
+    t('calendar.days.sat'),
+    t('calendar.days.sun')
+  ];
 
   return (
     <section id="calendar" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-serif font-bold text-gray-900 mb-4">Verifica Disponibilità</h2>
+          <h2 className="text-3xl font-serif font-bold text-gray-900 mb-4">{t('calendar.title')}</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Consulta il calendario per vedere i giorni liberi. I giorni in verde sono liberi, quelli in rosso sono occupati.
-            Contattaci direttamente per confermare la tua prenotazione.
+            {t('calendar.subtitle')}
           </p>
         </div>
 
         {!GOOGLE_CALENDAR_ID || !GOOGLE_API_KEY ? (
           <div className="bg-gray-100 p-8 rounded-xl text-center text-gray-500">
-            <p>Calendario non configurato. Verifica le variabili d'ambiente (GOOGLE_CALENDAR_ID e GOOGLE_API_KEY).</p>
+            <p>{t('calendar.notConfigured')}</p>
           </div>
         ) : (
           <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 max-w-4xl mx-auto">
@@ -143,7 +162,7 @@ export const CalendarSection: React.FC = () => {
               <button
                 onClick={() => changeMonth(-1)}
                 className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-                aria-label="Mese precedente"
+                aria-label={t('calendar.previousMonth')}
               >
                 <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -157,7 +176,7 @@ export const CalendarSection: React.FC = () => {
               <button
                 onClick={() => changeMonth(1)}
                 className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-                aria-label="Mese successivo"
+                aria-label={t('calendar.nextMonth')}
               >
                 <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -177,18 +196,18 @@ export const CalendarSection: React.FC = () => {
             {/* Griglia calendario */}
             {loading ? (
               <div className="text-center py-12 text-gray-500">
-                Caricamento...
+                {t('calendar.loading')}
               </div>
             ) : error ? (
               <div className="bg-red-50 border-2 border-red-200 rounded-lg p-6 text-center">
                 <div className="text-red-700 font-semibold mb-2">⚠️ {error}</div>
                 <div className="text-red-600 text-sm">
-                  Per risolvere, segui le istruzioni di configurazione fornite dal supporto.
+                  {t('calendar.errors.instructions')}
                 </div>
               </div>
             ) : calendarDays.length === 0 ? (
               <div className="text-center py-12 text-gray-500">
-                Nessun dato disponibile
+                {t('calendar.noData')}
               </div>
             ) : (
               <div className="grid grid-cols-7 gap-2 sm:gap-3">
@@ -217,11 +236,11 @@ export const CalendarSection: React.FC = () => {
             <div className="flex items-center justify-center gap-6 mt-6 pt-6 border-t border-gray-200">
               <div className="flex items-center gap-2">
                 <div className="w-6 h-6 bg-green-100 border-2 border-green-300 rounded"></div>
-                <span className="text-sm text-gray-600">Libero</span>
+                <span className="text-sm text-gray-600">{t('calendar.available')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-6 h-6 bg-red-100 border-2 border-red-300 rounded"></div>
-                <span className="text-sm text-gray-600">Occupato</span>
+                <span className="text-sm text-gray-600">{t('calendar.occupied')}</span>
               </div>
             </div>
           </div>
@@ -229,7 +248,7 @@ export const CalendarSection: React.FC = () => {
 
         <div className="mt-8 text-center">
           <p className="text-sm text-gray-500 italic">
-            * Il calendario è aggiornato periodicamente. Per la certezza assoluta, invia una richiesta.
+            {t('calendar.disclaimer')}
           </p>
         </div>
       </div>

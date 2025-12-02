@@ -1,0 +1,225 @@
+{
+  "common": {
+    "all": "All"
+  },
+  "navbar": {
+    "home": "Home",
+    "apartment": "The Apartment",
+    "gallery": "Gallery",
+    "excursions": "Excursions",
+    "availability": "Availability",
+    "assistant": "Personal Assistant",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Your peaceful corner in Sardinia",
+    "subtitle": "Discover the authentic beauty of Torpè. Just minutes from the crystal-clear sea of Posada, immersed in the tranquility of nature.",
+    "checkAvailability": "Check Availability",
+    "askAssistant": "Ask the Personal Assistant",
+    "previousImage": "Previous image",
+    "nextImage": "Next image",
+    "goToImage": "Go to image"
+  },
+  "features": {
+    "title": "Our Services",
+    "subtitle": "We have taken care of every detail to make your stay unforgettable, combining modern comfort with traditional Sardinian hospitality.",
+    "panoramicView": {
+      "title": "Panoramic View",
+      "description": "Enjoy spectacular sunsets over the hills and the Fava castle from the private terrace."
+    },
+    "airConditioning": {
+      "title": "Air Conditioning",
+      "description": "Fresh and comfortable environments in all rooms for maximum summer relaxation."
+    },
+    "wifi": {
+      "title": "Free Wi-Fi",
+      "description": "High-speed connection to work remotely or watch streaming movies."
+    },
+    "kitchen": {
+      "title": "Equipped Kitchen",
+      "description": "Everything you need to prepare delicious dinners with local Sardinian products."
+    },
+    "parking": {
+      "title": "Parking",
+      "description": "Free private parking available right in front of the property."
+    },
+    "location": {
+      "title": "Strategic Location",
+      "description": "Just 5 minutes from the 131 DCN highway and 10 minutes from the beaches."
+    }
+  },
+  "gallery": {
+    "title": "Photo Gallery",
+    "subtitle": "Discover every corner of our apartment through photos. A preview of the comfort and beauty that await you.",
+    "categories": {
+      "all": "All",
+      "exteriors": "Exteriors",
+      "bedrooms": "Bedrooms",
+      "kitchenLiving": "Kitchen and Living Room",
+      "bathroom": "Bathroom"
+    },
+    "closeGallery": "Close gallery",
+    "previousImage": "Previous image",
+    "nextImage": "Next image",
+    "imageAlt": {
+      "terrace1": "Panoramic terrace with view",
+      "terrace2": "Terrace equipped for outdoor dining",
+      "bedroom1": "Bedroom",
+      "bedroom2": "Bedroom",
+      "kitchen1": "Equipped kitchen",
+      "kitchen2": "Kitchen area with details",
+      "bathroom": "Bathroom with ceramic tiles"
+    }
+  },
+  "excursions": {
+    "title": "Excursions and Places to Visit",
+    "subtitle": "Discover the wonders of eastern Sardinia. Paradisiacal beaches, breathtaking mountains and cultural treasures await you just a few kilometers from home.",
+    "categories": {
+      "all": "All",
+      "beaches": "Beaches",
+      "natureMountain": "Nature and Mountains",
+      "cultureHistory": "Culture and History",
+      "activities": "Activities"
+    },
+    "excursionTips": "Tips for your excursions",
+    "excursionTipsText": "Our AI assistant <strong>Personal Assistant</strong> can provide you with detailed information on schedules, bookings and personalized advice for each destination. Don't hesitate to contact us to organize your perfect experience!",
+    "places": {
+      "calaGoloritze": {
+        "name": "Cala Goloritzè Beach",
+        "description": "The pristine and wild Cala Goloritzè, symbol of Baunei, is one of the coastal stretches of the Gulf of Orosei where sea and mountain meet in perfect harmony."
+      },
+      "calaGinepro": {
+        "name": "Cala Ginepro Beach",
+        "description": "One of the most beautiful beaches in the area, with fine white sand and crystal-clear sea. Ideal for families and water sports."
+      },
+      "berchida": {
+        "name": "Berchida Beach",
+        "description": "Pristine beach surrounded by dunes and junipers, perfect for those seeking tranquility and wild nature."
+      },
+      "calaLiberotto": {
+        "name": "Cala Liberotto",
+        "description": "Small bay with turquoise waters and picturesque rocks. Great for snorkeling and diving."
+      },
+      "orosei": {
+        "name": "Orosei Beach",
+        "description": "Long golden sand beach with all services, restaurants and beach facilities."
+      },
+      "monteAlbo": {
+        "name": "Monte Albo",
+        "description": "Limestone massif with panoramic trails and breathtaking views of the eastern coast. Trekking of various difficulty levels."
+      },
+      "grotteMonteAlbo": {
+        "name": "Monte Albo Caves",
+        "description": "Natural cave system with spectacular rock formations. Guided tours available."
+      },
+      "forestaSosNibberos": {
+        "name": "Sos Nibberos Forest",
+        "description": "Ancient forest of holm oaks and cork oaks, perfect for nature walks and birdwatching."
+      },
+      "oroseiCentro": {
+        "name": "Orosei Historic Center",
+        "description": "Medieval village with historic churches, characteristic squares and traditional Sardinian architecture."
+      },
+      "nuragheLoelle": {
+        "name": "Nuraghe di Loelle",
+        "description": "Well-preserved nuragic archaeological site, evidence of the ancient Sardinian civilization."
+      },
+      "chiesaSanPietro": {
+        "name": "Church of San Pietro in Torpè",
+        "description": "Ancient Romanesque church from the 12th century with frescoes and typical architecture of the period."
+      },
+      "giroBarca": {
+        "name": "Boat Trip to Cala Luna",
+        "description": "Boat excursion to the famous coves of the Gulf of Orosei, with snorkeling opportunities."
+      },
+      "gorropu": {
+        "name": "Gorropu Gorge Trekking",
+        "description": "One of the deepest canyons in Europe. An unforgettable experience for trekking lovers."
+      }
+    }
+  },
+  "calendar": {
+    "title": "Check Availability",
+    "subtitle": "Check the calendar to see available days. Days in green are available, those in red are occupied. Contact us directly to confirm your booking.",
+    "notConfigured": "Calendar not configured. Check environment variables (GOOGLE_CALENDAR_ID and GOOGLE_API_KEY).",
+    "previousMonth": "Previous month",
+    "nextMonth": "Next month",
+    "loading": "Loading...",
+    "noData": "No data available",
+    "available": "Available",
+    "occupied": "Occupied",
+    "disclaimer": "* The calendar is updated periodically. For absolute certainty, send a request.",
+    "months": {
+      "0": "January",
+      "1": "February",
+      "2": "March",
+      "3": "April",
+      "4": "May",
+      "5": "June",
+      "6": "July",
+      "7": "August",
+      "8": "September",
+      "9": "October",
+      "10": "November",
+      "11": "December"
+    },
+    "days": {
+      "mon": "Mon",
+      "tue": "Tue",
+      "wed": "Wed",
+      "thu": "Thu",
+      "fri": "Fri",
+      "sat": "Sat",
+      "sun": "Sun"
+    },
+    "errors": {
+      "notAccessible": "The calendar is not accessible. Make sure it is public.",
+      "notFound": "Calendar not found. Check the calendar ID.",
+      "generic": "Error loading calendar. Please try again later.",
+      "connection": "Connection error. Check the configuration.",
+      "instructions": "To resolve, follow the configuration instructions provided by support."
+    }
+  },
+  "concierge": {
+    "title": "Personal Assistant",
+    "subtitle": "Do you have questions about Torpè or the surroundings? Ask Laura, our AI assistant.",
+    "initialMessage": "Hello! I'm Laura, your virtual assistant for Casa Vacanze Torpè. How can I help you today? ",
+    "placeholder": "Ask: 'What is the nearest beach?'...",
+    "send": "Send",
+    "errorMessage": "Sorry, I had a small connection problem. Please try again soon."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We are at your disposal for any information. Book your dream vacation in Torpè now.",
+    "address": "Address",
+    "addressValue": "Via Lombardia 7, 08020 Torpè (NU)",
+    "email": "Email",
+    "emailValue": "torpe.holidayhome@gmail.com",
+    "whereWeAre": "Where We Are",
+    "telegramTitle": "Chat on Telegram",
+    "telegramDescription": "Prefer an immediate response? Write to our Telegram bot for quick info.",
+    "openTelegram": "Open Telegram Chatbot",
+    "formTitle": "Send a Request",
+    "formSuccessTitle": "Message sent successfully!",
+    "formSuccessMessage": "We will reply via email as soon as possible.",
+    "formErrorTitle": "Error sending.",
+    "formErrorMessage": "Make sure the Formspree configuration is correct and try again.",
+    "retry": "Try again",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "John Doe",
+    "emailPlaceholder": "john@example.com",
+    "checkin": "Check-in Date",
+    "checkout": "Check-out Date",
+    "message": "Message",
+    "messagePlaceholder": "Requests, notes, number of guests...",
+    "submit": "Send",
+    "submitting": "Sending...",
+    "configMissingTelegram": "⚠️ Missing Configuration\n\nTelegram link not found in environment variables.",
+    "configMissingFormspree": "⚠️ Missing Configuration\n\nFormspree endpoint not found in environment variables."
+  },
+  "footer": {
+    "copyright": "© {{year}} All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms and Conditions"
+  }
+}

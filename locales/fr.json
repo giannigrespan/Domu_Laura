@@ -1,0 +1,225 @@
+{
+  "common": {
+    "all": "Tous"
+  },
+  "navbar": {
+    "home": "Accueil",
+    "apartment": "L'Appartement",
+    "gallery": "Galerie",
+    "excursions": "Excursions",
+    "availability": "Disponibilité",
+    "assistant": "Assistant Personnel",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Votre coin de paix en Sardaigne",
+    "subtitle": "Découvrez la beauté authentique de Torpè. À quelques minutes de la mer cristalline de Posada, plongé dans la tranquillité de la nature.",
+    "checkAvailability": "Vérifier la disponibilité",
+    "askAssistant": "Demander à l'Assistant Personnel",
+    "previousImage": "Image précédente",
+    "nextImage": "Image suivante",
+    "goToImage": "Aller à l'image"
+  },
+  "features": {
+    "title": "Nos Services",
+    "subtitle": "Nous avons soigné chaque détail pour rendre votre séjour inoubliable, combinant le confort moderne avec l'hospitalité traditionnelle sarde.",
+    "panoramicView": {
+      "title": "Vue Panoramique",
+      "description": "Profitez de couchers de soleil spectaculaires sur les collines et le château de la Fava depuis votre terrasse privée."
+    },
+    "airConditioning": {
+      "title": "Climatisation",
+      "description": "Ambiances fraîches et confortables dans toutes les pièces pour la détente estivale maximale."
+    },
+    "wifi": {
+      "title": "Wi-Fi Gratuit",
+      "description": "Connexion haute vitesse pour le télétravail ou regarder des films en streaming."
+    },
+    "kitchen": {
+      "title": "Cuisine Équipée",
+      "description": "Tout le nécessaire pour préparer de délicieux dîners avec des produits locaux sardes."
+    },
+    "parking": {
+      "title": "Parking",
+      "description": "Parking privé gratuit disponible directement devant l'établissement."
+    },
+    "location": {
+      "title": "Position Stratégique",
+      "description": "À seulement 5 minutes de la route 131 DCN et 10 minutes des plages."
+    }
+  },
+  "gallery": {
+    "title": "Galerie Photographique",
+    "subtitle": "Découvrez chaque coin de notre appartement à travers les photos. Un aperçu du confort et de la beauté qui vous attendent.",
+    "categories": {
+      "all": "Tous",
+      "exteriors": "Extérieurs",
+      "bedrooms": "Chambres",
+      "kitchenLiving": "Cuisine et Salon",
+      "bathroom": "Salle de bain"
+    },
+    "closeGallery": "Fermer la galerie",
+    "previousImage": "Image précédente",
+    "nextImage": "Image suivante",
+    "imageAlt": {
+      "terrace1": "Terrasse panoramique avec vue",
+      "terrace2": "Terrasse équipée pour les déjeuners en plein air",
+      "bedroom1": "Chambre à coucher",
+      "bedroom2": "Chambre à coucher",
+      "kitchen1": "Cuisine équipée",
+      "kitchen2": "Zone cuisine avec détails",
+      "bathroom": "Salle de bain avec carrelage en céramique"
+    }
+  },
+  "excursions": {
+    "title": "Excursions et Lieux à Visiter",
+    "subtitle": "Découvrez les merveilles de la Sardaigne orientale. Des plages paradisiaques, des montagnes à couper le souffle et des trésors culturels vous attendent à quelques kilomètres de chez vous.",
+    "categories": {
+      "all": "Tous",
+      "beaches": "Plages",
+      "natureMountain": "Nature et Montagne",
+      "cultureHistory": "Culture et Histoire",
+      "activities": "Activités"
+    },
+    "excursionTips": "Conseils pour vos excursions",
+    "excursionTipsText": "Notre assistante IA <strong>Assistant Personnel</strong> peut vous fournir des informations détaillées sur les horaires, les réservations et des conseils personnalisés pour chaque destination. N'hésitez pas à nous contacter pour organiser votre expérience parfaite!",
+    "places": {
+      "calaGoloritze": {
+        "name": "Plage de Cala Goloritzè",
+        "description": "La Cala Goloritzé vierge et sauvage, emblématique de Baunei, est l'une des sections côtières du golfe d'Orosei où la mer et la montagne se rencontrent en parfaite harmonie."
+      },
+      "calaGinepro": {
+        "name": "Plage de Cala Ginepro",
+        "description": "L'une des plus belles plages de la région, avec un sable blanc très fin et une mer cristalline. Idéale pour les familles et les sports nautiques."
+      },
+      "berchida": {
+        "name": "Plage de Berchida",
+        "description": "Plage vierge entourée de dunes et de genévriers, parfaite pour ceux qui cherchent la tranquillité et la nature sauvage."
+      },
+      "calaLiberotto": {
+        "name": "Cala Liberotto",
+        "description": "Petite baie aux eaux turquoise et aux rochers pittoresques. Excellente pour le snorkeling et la plongée."
+      },
+      "orosei": {
+        "name": "Plage d'Orosei",
+        "description": "Longue plage de sable doré avec tous les services, restaurants et établissements balnéaires."
+      },
+      "monteAlbo": {
+        "name": "Monte Albo",
+        "description": "Massif calcaire avec des sentiers panoramiques et une vue à couper le souffle sur la côte orientale. Randonnée de différents niveaux de difficulté."
+      },
+      "grotteMonteAlbo": {
+        "name": "Grottes de Monte Albo",
+        "description": "Système de grottes naturelles avec des formations rocheuses spectaculaires. Visites guidées disponibles."
+      },
+      "forestaSosNibberos": {
+        "name": "Forêt de Sos Nibberos",
+        "description": "Forêt séculaire de chênes verts et de chênes-lièges, parfaite pour les promenades naturalistes et l'observation des oiseaux."
+      },
+      "oroseiCentro": {
+        "name": "Centre Historique d'Orosei",
+        "description": "Bourg médiéval avec des églises historiques, des places caractéristiques et une architecture traditionnelle sarde."
+      },
+      "nuragheLoelle": {
+        "name": "Nuraghe de Loelle",
+        "description": "Site archéologique nuragique bien conservé, témoignage de l'ancienne civilisation sarde."
+      },
+      "chiesaSanPietro": {
+        "name": "Église de San Pietro à Torpè",
+        "description": "Ancienne église romane du XIIe siècle avec des fresques et une architecture typique de la période."
+      },
+      "giroBarca": {
+        "name": "Tour en Bateau à Cala Luna",
+        "description": "Excursion en bateau aux célèbres criques du Golfe d'Orosei, avec possibilité de snorkeling."
+      },
+      "gorropu": {
+        "name": "Randonnée Gorge de Gorropu",
+        "description": "L'un des canyons les plus profonds d'Europe. Expérience inoubliable pour les amateurs de randonnée."
+      }
+    }
+  },
+  "calendar": {
+    "title": "Vérifier la Disponibilité",
+    "subtitle": "Consultez le calendrier pour voir les jours libres. Les jours en vert sont libres, ceux en rouge sont occupés. Contactez-nous directement pour confirmer votre réservation.",
+    "notConfigured": "Calendrier non configuré. Vérifiez les variables d'environnement (GOOGLE_CALENDAR_ID et GOOGLE_API_KEY).",
+    "previousMonth": "Mois précédent",
+    "nextMonth": "Mois suivant",
+    "loading": "Chargement...",
+    "noData": "Aucune donnée disponible",
+    "available": "Disponible",
+    "occupied": "Occupé",
+    "disclaimer": "* Le calendrier est mis à jour régulièrement. Pour une certitude absolue, envoyez une demande.",
+    "months": {
+      "0": "Janvier",
+      "1": "Février",
+      "2": "Mars",
+      "3": "Avril",
+      "4": "Mai",
+      "5": "Juin",
+      "6": "Juillet",
+      "7": "Août",
+      "8": "Septembre",
+      "9": "Octobre",
+      "10": "Novembre",
+      "11": "Décembre"
+    },
+    "days": {
+      "mon": "Lun",
+      "tue": "Mar",
+      "wed": "Mer",
+      "thu": "Jeu",
+      "fri": "Ven",
+      "sat": "Sam",
+      "sun": "Dim"
+    },
+    "errors": {
+      "notAccessible": "Le calendrier n'est pas accessible. Assurez-vous qu'il est public.",
+      "notFound": "Calendrier non trouvé. Vérifiez l'ID du calendrier.",
+      "generic": "Erreur lors du chargement du calendrier. Veuillez réessayer plus tard.",
+      "connection": "Erreur de connexion. Vérifiez la configuration.",
+      "instructions": "Pour résoudre, suivez les instructions de configuration fournies par le support."
+    }
+  },
+  "concierge": {
+    "title": "Assistant Personnel",
+    "subtitle": "Vous avez des questions sur Torpè ou ses environs? Demandez à Laura, notre assistant IA.",
+    "initialMessage": "Bonjour! Je suis Laura, votre assistante virtuelle pour Casa Vacanze Torpè. Comment puis-je vous aider aujourd'hui? ",
+    "placeholder": "Demandez: 'Quelle est la plage la plus proche?'...",
+    "send": "Envoyer",
+    "errorMessage": "Désolé, j'ai eu un petit problème de connexion. Veuillez réessayer bientôt."
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Nous sommes à votre disposition pour toute information. Réservez maintenant vos vacances de rêve à Torpè.",
+    "address": "Adresse",
+    "addressValue": "Via Lombardia 7, 08020 Torpè (NU)",
+    "email": "Email",
+    "emailValue": "torpe.holidayhome@gmail.com",
+    "whereWeAre": "Où Nous Sommes",
+    "telegramTitle": "Discutez sur Telegram",
+    "telegramDescription": "Vous préférez une réponse immédiate? Écrivez à notre bot Telegram pour des informations rapides.",
+    "openTelegram": "Ouvrir le Chatbot Telegram",
+    "formTitle": "Envoyer une demande",
+    "formSuccessTitle": "Message envoyé avec succès!",
+    "formSuccessMessage": "Nous vous répondrons par email dès que possible.",
+    "formErrorTitle": "Erreur lors de l'envoi.",
+    "formErrorMessage": "Assurez-vous que la configuration de Formspree est correcte et réessayez.",
+    "retry": "Réessayer",
+    "fullName": "Nom Complet",
+    "fullNamePlaceholder": "Jean Dupont",
+    "emailPlaceholder": "jean@exemple.com",
+    "checkin": "Date d'Arrivée",
+    "checkout": "Date de Départ",
+    "message": "Message",
+    "messagePlaceholder": "Demandes, remarques, nombre de clients...",
+    "submit": "Envoyer",
+    "submitting": "Envoi en cours...",
+    "configMissingTelegram": "⚠️ Configuration Manquante\n\nLien Telegram introuvable dans les variables d'environnement.",
+    "configMissingFormspree": "⚠️ Configuration Manquante\n\nPoint de terminaison Formspree introuvable dans les variables d'environnement."
+  },
+  "footer": {
+    "copyright": "© {{year}} Tous droits réservés.",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Termes et Conditions"
+  }
+}

@@ -1,137 +1,126 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface Excursion {
-  name: string;
-  description: string;
+  translationKey: string;
   image: string;
   distance: string;
-  category: string;
+  category: 'beaches' | 'natureMountain' | 'cultureHistory' | 'activities';
   duration?: string;
 }
 
-// Lista delle escursioni e luoghi da visitare - Sostituisci con le tue immagini reali
+// Lista delle escursioni e luoghi da visitare - Usa chiavi di traduzione
 const EXCURSIONS: Excursion[] = [
   // Spiagge
   {
-    name: 'Spiaggia di Cala Goloritzè',
-    description: 'L’incontaminata e selvaggia Cala Goloritzé, testimonial di Baunei, è uno dei tratti costieri del golfo di Orosei dove mare e montagna si incontrano in perfetta armonia.',
+    translationKey: 'excursions.places.calaGoloritze',
     image: '/calagoloritze.jpg',
     distance: '50 km',
-    category: 'Spiagge',
+    category: 'beaches',
     duration: '1 ora'
   },
   {
-    name: 'Spiaggia di Cala Ginepro',
-    description: 'Una delle spiagge più belle della zona, con sabbia bianca finissima e mare cristallino. Ideale per famiglie e sport acquatici.',
+    translationKey: 'excursions.places.calaGinepro',
     image: '/cala ginepro.jpg',
     distance: '15 km',
-    category: 'Spiagge',
+    category: 'beaches',
     duration: '20 min'
   },
   {
-    name: 'Spiaggia di Berchida',
-    description: 'Spiaggia incontaminata circondata da dune e ginepri, perfetta per chi cerca tranquillità e natura selvaggia.',
+    translationKey: 'excursions.places.berchida',
     image: '/berchida.jpg',
     distance: '12 km',
-    category: 'Spiagge',
+    category: 'beaches',
     duration: '18 min'
   },
   {
-    name: 'Cala Liberotto',
-    description: 'Piccola baia con acque turchesi e scogli pittoreschi. Ottima per snorkeling e immersioni.',
+    translationKey: 'excursions.places.calaLiberotto',
     image: '/liberotto.jpg',
     distance: '18 km',
-    category: 'Spiagge',
+    category: 'beaches',
     duration: '25 min'
   },
   {
-    name: 'Spiaggia di Orosei',
-    description: 'Lunga spiaggia di sabbia dorata con tutti i servizi, ristoranti e stabilimenti balneari.',
+    translationKey: 'excursions.places.orosei',
     image: '/orosei.jpg',
     distance: '20 km',
-    category: 'Spiagge',
+    category: 'beaches',
     duration: '25 min'
   },
 
   // Natura e Montagna
   {
-    name: 'Monte Albo',
-    description: 'Massiccio calcareo con sentieri panoramici e vista mozzafiato sulla costa orientale. Trekking di vari livelli di difficoltà.',
+    translationKey: 'excursions.places.monteAlbo',
     image: '/albo.jpg',
     distance: '8 km',
-    category: 'Natura e Montagna',
+    category: 'natureMountain',
     duration: '15 min'
   },
   {
-    name: 'Grotte di Monte Albo',
-    description: 'Sistema di grotte naturali con formazioni rocciose spettacolari. Visite guidate disponibili.',
+    translationKey: 'excursions.places.grotteMonteAlbo',
     image: '/cava ispica.jpg',
     distance: '10 km',
-    category: 'Natura e Montagna',
+    category: 'natureMountain',
     duration: '15 min'
   },
   {
-    name: 'Foresta di Sos Nibberos',
-    description: 'Foresta secolare di lecci e sughere, perfetta per passeggiate naturalistiche e birdwatching.',
+    translationKey: 'excursions.places.forestaSosNibberos',
     image: '/niberros.jpg',
     distance: '25 km',
-    category: 'Natura e Montagna',
+    category: 'natureMountain',
     duration: '30 min'
   },
 
   // Cultura e Storia
   {
-    name: 'Centro Storico di Orosei',
-    description: 'Borgo medievale con chiese storiche, piazze caratteristiche e architettura tradizionale sarda.',
+    translationKey: 'excursions.places.oroseiCentro',
     image: '/orosei citta.jpg',
     distance: '20 km',
-    category: 'Cultura e Storia',
+    category: 'cultureHistory',
     duration: '25 min'
   },
   {
-    name: 'Nuraghe di Loelle',
-    description: 'Sito archeologico nuragico ben conservato, testimonianza dell\'antica civiltà sarda.',
+    translationKey: 'excursions.places.nuragheLoelle',
     image: '/loelle.jpg',
     distance: '15 km',
-    category: 'Cultura e Storia',
+    category: 'cultureHistory',
     duration: '20 min'
   },
   {
-    name: 'Chiesa di San Pietro a Torpè',
-    description: 'Antica chiesa romanica del XII secolo con affreschi e architettura tipica del periodo.',
+    translationKey: 'excursions.places.chiesaSanPietro',
     image: '/nuraghe.jpg',
     distance: '2 km',
-    category: 'Cultura e Storia',
+    category: 'cultureHistory',
     duration: '5 min'
   },
 
   // Attività
   {
-    name: 'Giro in Barca a Cala Luna',
-    description: 'Escursione in barca alle famose calette del Golfo di Orosei, con possibilità di snorkeling.',
+    translationKey: 'excursions.places.giroBarca',
     image: '/cala luna.jpg',
     distance: '25 km (porto)',
-    category: 'Attività',
+    category: 'activities',
     duration: 'Giornata intera'
   },
   {
-    name: 'Trekking Gola di Gorropu',
-    description: 'Uno dei canyon più profondi d\'Europa. Esperienza indimenticabile per amanti del trekking.',
+    translationKey: 'excursions.places.gorropu',
     image: '/gorroppu.jpg',
     distance: '60 km',
-    category: 'Attività',
+    category: 'activities',
     duration: '1h 15min'
   }
 ];
 
 export const Excursions: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('Tutte');
+  const { t } = useTranslation();
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   // Estrai categorie uniche
-  const categories = ['Tutte', ...Array.from(new Set(EXCURSIONS.map(exc => exc.category)))];
+  const uniqueCategories = Array.from(new Set(EXCURSIONS.map(exc => exc.category)));
+  const categories = ['all', ...uniqueCategories];
 
   // Filtra escursioni per categoria
-  const filteredExcursions = selectedCategory === 'Tutte'
+  const filteredExcursions = selectedCategory === 'all'
     ? EXCURSIONS
     : EXCURSIONS.filter(exc => exc.category === selectedCategory);
 
@@ -141,11 +130,10 @@ export const Excursions: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl font-serif font-bold text-gray-900 mb-4">
-            Escursioni e Luoghi da Visitare
+            {t('excursions.title')}
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Scopri le meraviglie della Sardegna orientale. Spiagge paradisiache,
-            montagne mozzafiato e tesori culturali ti aspettano a pochi chilometri da casa.
+            {t('excursions.subtitle')}
           </p>
         </div>
 
@@ -161,7 +149,7 @@ export const Excursions: React.FC = () => {
                   : 'bg-white text-gray-700 hover:bg-gray-100 shadow-sm border border-gray-200'
               }`}
             >
-              {category}
+              {t(`excursions.categories.${category}`)}
             </button>
           ))}
         </div>
@@ -177,7 +165,7 @@ export const Excursions: React.FC = () => {
               <div className="relative h-56 overflow-hidden">
                 <img
                   src={excursion.image}
-                  alt={excursion.name}
+                  alt={t(`${excursion.translationKey}.name`)}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   loading="lazy"
                 />
@@ -185,7 +173,7 @@ export const Excursions: React.FC = () => {
                 {/* Badge Categoria */}
                 <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full">
                   <span className="text-xs font-bold text-sardinia-sea uppercase tracking-wide">
-                    {excursion.category}
+                    {t(`excursions.categories.${excursion.category}`)}
                   </span>
                 </div>
 
@@ -196,11 +184,11 @@ export const Excursions: React.FC = () => {
               {/* Contenuto */}
               <div className="p-6">
                 <h3 className="text-xl font-serif font-bold text-gray-900 mb-3">
-                  {excursion.name}
+                  {t(`${excursion.translationKey}.name`)}
                 </h3>
 
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  {excursion.description}
+                  {t(`${excursion.translationKey}.description`)}
                 </p>
 
                 {/* Info Bottom */}
@@ -237,13 +225,12 @@ export const Excursions: React.FC = () => {
             </div>
             <div className="ml-4">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Consigli per le tue escursioni
+                {t('excursions.excursionTips')}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
-                La nostra assistente AI <strong>Assistente Personale</strong> può fornirti informazioni dettagliate
-                su orari, prenotazioni e consigli personalizzati per ogni destinazione.
-                Non esitare a contattarci per organizzare la tua esperienza perfetta!
-              </p>
+              <p
+                className="text-gray-600 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: t('excursions.excursionTipsText') }}
+              />
             </div>
           </div>
         </div>

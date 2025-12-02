@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface GalleryImage {
   url: string;
   alt: string;
   category?: string;
 }
+
+// Mapping from Italian category names to translation keys
+const CATEGORY_TRANSLATION_KEYS: Record<string, string> = {
+  'Esterni': 'gallery.categories.exteriors',
+  'Camere': 'gallery.categories.bedrooms',
+  'Cucina e Soggiorno': 'gallery.categories.kitchenLiving',
+  'Bagno': 'gallery.categories.bathroom'
+};
 
 // Array di immagini - Foto reali della casa
 const GALLERY_IMAGES: GalleryImage[] = [
@@ -53,8 +62,17 @@ const GALLERY_IMAGES: GalleryImage[] = [
 ];
 
 export const Gallery: React.FC = () => {
+  const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('Tutte');
+
+  // Helper function to translate category names
+  const translateCategory = (category: string): string => {
+    if (category === 'Tutte') {
+      return t('gallery.categories.all');
+    }
+    return t(CATEGORY_TRANSLATION_KEYS[category] || category);
+  };
 
   // Estrai categorie uniche
   const categories = ['Tutte', ...Array.from(new Set(GALLERY_IMAGES.map(img => img.category).filter((cat): cat is string => Boolean(cat))))];
@@ -104,11 +122,10 @@ export const Gallery: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl font-serif font-bold text-gray-900 mb-4">
-            Galleria Fotografica
+            {t('gallery.title')}
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Scopri ogni angolo del nostro appartamento attraverso le foto. 
-            Un'anteprima del comfort e della bellezza che ti aspettano.
+            {t('gallery.subtitle')}
           </p>
         </div>
 
@@ -124,7 +141,7 @@ export const Gallery: React.FC = () => {
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
-              {category}
+              {translateCategory(category)}
             </button>
           ))}
         </div>
@@ -161,7 +178,7 @@ export const Gallery: React.FC = () => {
               {/* Label categoria */}
               {image.category && (
                 <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-gray-700">
-                  {image.category}
+                  {translateCategory(image.category)}
                 </div>
               )}
             </div>
@@ -178,7 +195,7 @@ export const Gallery: React.FC = () => {
             <button
               onClick={closeLightbox}
               className="absolute top-4 right-4 z-60 p-2 bg-white/10 hover:bg-white/20 rounded-full transition-all"
-              aria-label="Chiudi galleria"
+              aria-label={t('gallery.closeGallery')}
             >
               <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -192,7 +209,7 @@ export const Gallery: React.FC = () => {
                 goToPrevious();
               }}
               className="absolute left-4 z-60 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all"
-              aria-label="Immagine precedente"
+              aria-label={t('gallery.previousImage')}
             >
               <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -228,7 +245,7 @@ export const Gallery: React.FC = () => {
                 goToNext();
               }}
               className="absolute right-4 z-60 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all"
-              aria-label="Immagine successiva"
+              aria-label={t('gallery.nextImage')}
             >
               <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

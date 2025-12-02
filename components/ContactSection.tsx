@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export const ContactSection: React.FC = () => {
+  const { t } = useTranslation();
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'submitted' | 'error'>('idle');
 
   // Variabili caricate dall'ambiente (Vercel)
@@ -10,7 +12,7 @@ export const ContactSection: React.FC = () => {
   const handleTelegramClick = (e: React.MouseEvent) => {
     if (!TELEGRAM_LINK) {
       e.preventDefault();
-      alert("⚠️ Configurazione Mancante\n\nLink Telegram non trovato nelle variabili d'ambiente.");
+      alert(t('contact.configMissingTelegram'));
     }
   };
 
@@ -19,7 +21,7 @@ export const ContactSection: React.FC = () => {
 
     // Controllo di sicurezza
     if (!FORMSPREE_ENDPOINT) {
-      alert("⚠️ Configurazione Mancante\n\nEndpoint Formspree non trovato nelle variabili d'ambiente.");
+      alert(t('contact.configMissingFormspree'));
       return;
     }
 
@@ -60,9 +62,9 @@ export const ContactSection: React.FC = () => {
           
           {/* Contact Info & Telegram */}
           <div>
-            <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Contattaci</h2>
+            <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">{t('contact.title')}</h2>
             <p className="text-gray-600 mb-8 text-lg">
-              Siamo a tua disposizione per qualsiasi informazione. Prenota ora la tua vacanza da sogno a Torpè.
+              {t('contact.subtitle')}
             </p>
 
             <div className="space-y-6">
@@ -74,8 +76,8 @@ export const ContactSection: React.FC = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-900">Indirizzo</h4>
-                  <p className="text-gray-600">Via Lombardia 7, 08020 Torpè (NU)</p>
+                  <h4 className="font-bold text-gray-900">{t('contact.address')}</h4>
+                  <p className="text-gray-600">{t('contact.addressValue')}</p>
                 </div>
               </div>
 
@@ -86,15 +88,15 @@ export const ContactSection: React.FC = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-900">Email</h4>
-                  <p className="text-gray-600">torpe.holidayhome@gmail.com</p>
+                  <h4 className="font-bold text-gray-900">{t('contact.email')}</h4>
+                  <p className="text-gray-600">{t('contact.emailValue')}</p>
                 </div>
               </div>
             </div>
 
             {/* Google Maps */}
             <div className="mt-10">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Dove Siamo</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('contact.whereWeAre')}</h3>
               <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
                 <iframe
                   src="https://maps.google.com/maps?q=Via+Lombardia+7,+08020+Torpè+NU&t=&z=15&ie=UTF8&iwloc=&output=embed"
@@ -111,9 +113,9 @@ export const ContactSection: React.FC = () => {
 
             {/* Telegram CTA */}
             <div className="mt-10 p-6 bg-white rounded-xl shadow-md border border-blue-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Chatta su Telegram</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{t('contact.telegramTitle')}</h3>
               <p className="text-gray-600 mb-4">
-                Preferisci una risposta immediata? Scrivi al nostro bot Telegram per info rapide.
+                {t('contact.telegramDescription')}
               </p>
               <a
                 href={TELEGRAM_LINK}
@@ -125,32 +127,32 @@ export const ContactSection: React.FC = () => {
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                    <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 11.944 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
                 </svg>
-                Apri Telegram Chatbot
+                {t('contact.openTelegram')}
               </a>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Invia una richiesta</h3>
-            
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('contact.formTitle')}</h3>
+
             {formStatus === 'submitted' ? (
               <div className="bg-green-50 text-green-700 p-6 rounded-lg text-center border border-green-200 animate-fade-in-up">
                 <svg className="w-12 h-12 mx-auto mb-3 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <p className="font-bold text-lg">Messaggio inviato con successo!</p>
-                <p className="text-sm mt-1">Ti risponderemo via email il prima possibile.</p>
+                <p className="font-bold text-lg">{t('contact.formSuccessTitle')}</p>
+                <p className="text-sm mt-1">{t('contact.formSuccessMessage')}</p>
               </div>
             ) : formStatus === 'error' ? (
               <div className="bg-red-50 text-red-700 p-4 rounded-lg text-center border border-red-200 mb-6">
-                <p className="font-bold">Errore nell'invio.</p>
-                <p className="text-sm">Assicurati che la configurazione Formspree sia corretta e riprova.</p>
-                <button 
+                <p className="font-bold">{t('contact.formErrorTitle')}</p>
+                <p className="text-sm">{t('contact.formErrorMessage')}</p>
+                <button
                   onClick={() => setFormStatus('idle')}
                   className="mt-2 text-sm underline hover:text-red-800"
                 >
-                  Riprova
+                  {t('contact.retry')}
                 </button>
               </div>
             ) : null}
@@ -166,33 +168,33 @@ export const ContactSection: React.FC = () => {
                 <input type="hidden" name="_language" value="it" />
 
                 <div>
-                  <label htmlFor="fullname" className="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
-                  <input required name="nome_completo" type="text" id="fullname" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sardinia-sea focus:border-transparent outline-none transition-all" placeholder="Mario Rossi" />
+                  <label htmlFor="fullname" className="block text-sm font-medium text-gray-700 mb-1">{t('contact.fullName')}</label>
+                  <input required name="nome_completo" type="text" id="fullname" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sardinia-sea focus:border-transparent outline-none transition-all" placeholder={t('contact.fullNamePlaceholder')} />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                  <input required name="email" type="email" id="email" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sardinia-sea focus:border-transparent outline-none transition-all" placeholder="mario@esempio.com" />
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">{t('contact.email')}</label>
+                  <input required name="email" type="email" id="email" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sardinia-sea focus:border-transparent outline-none transition-all" placeholder={t('contact.emailPlaceholder')} />
                 </div>
                 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="checkin" className="block text-sm font-medium text-gray-700 mb-1">Data Check-in</label>
+                    <label htmlFor="checkin" className="block text-sm font-medium text-gray-700 mb-1">{t('contact.checkin')}</label>
                     <input name="data_checkin" type="date" id="checkin" required className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sardinia-sea focus:border-transparent outline-none transition-all" />
                   </div>
                   <div>
-                    <label htmlFor="checkout" className="block text-sm font-medium text-gray-700 mb-1">Data Check-out</label>
+                    <label htmlFor="checkout" className="block text-sm font-medium text-gray-700 mb-1">{t('contact.checkout')}</label>
                     <input name="data_checkout" type="date" id="checkout" required className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sardinia-sea focus:border-transparent outline-none transition-all" />
                   </div>
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Messaggio</label>
-                  <textarea required name="messaggio" id="message" rows={5} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sardinia-sea focus:border-transparent outline-none transition-all" placeholder="Richieste, note, numero ospiti..."></textarea>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">{t('contact.message')}</label>
+                  <textarea required name="messaggio" id="message" rows={5} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sardinia-sea focus:border-transparent outline-none transition-all" placeholder={t('contact.messagePlaceholder')}></textarea>
                 </div>
                 
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   disabled={formStatus === 'submitting'}
                   className="w-full bg-gray-900 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center"
                 >
@@ -202,10 +204,10 @@ export const ContactSection: React.FC = () => {
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                       </svg>
-                      Invio in corso...
+                      {t('contact.submitting')}
                     </>
                   ) : (
-                    'Invia'
+                    t('contact.submit')
                   )}
                 </button>
               </form>

@@ -1,12 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { sendMessageToConcierge } from '../services/geminiService';
 import { ChatMessage, LoadingState } from '../types';
 
 export const Concierge: React.FC = () => {
+  const { t } = useTranslation();
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       role: 'model',
-      text: 'Ciao! Sono Laura, il tuo assistente virtuale per Casa Vacanze Torpè. Come posso aiutarti oggi? ',
+      text: t('concierge.initialMessage'),
       timestamp: new Date()
     }
   ]);
@@ -56,7 +58,7 @@ export const Concierge: React.FC = () => {
       setLoadingState(LoadingState.ERROR);
       setMessages(prev => [...prev, {
         role: 'model',
-        text: 'Scusa, ho avuto un piccolo problema di connessione. Riprova tra poco.',
+        text: t('concierge.errorMessage'),
         timestamp: new Date()
       }]);
     }
@@ -66,8 +68,8 @@ export const Concierge: React.FC = () => {
     <section id="concierge" className="py-20 bg-sardinia-sea/5">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-serif font-bold text-gray-900 mb-2">Assistente Personale</h2>
-          <p className="text-gray-600">Hai domande su Torpè o sui dintorni? Chiedi a Laura, il nostro assistente AI.</p>
+          <h2 className="text-3xl font-serif font-bold text-gray-900 mb-2">{t('concierge.title')}</h2>
+          <p className="text-gray-600">{t('concierge.subtitle')}</p>
         </div>
 
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 flex flex-col h-[500px]">
@@ -112,7 +114,7 @@ export const Concierge: React.FC = () => {
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
-                placeholder="Chiedi: 'Qual è la spiaggia più vicina?'..."
+                placeholder={t('concierge.placeholder')}
                 className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sardinia-sea focus:border-transparent transition-all"
               />
               <button
@@ -120,7 +122,7 @@ export const Concierge: React.FC = () => {
                 disabled={loadingState === LoadingState.LOADING || !inputValue.trim()}
                 className="bg-sardinia-sea text-white px-6 py-3 rounded-lg font-medium hover:bg-sky-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
-                Invia
+                {t('concierge.send')}
               </button>
             </form>
           </div>

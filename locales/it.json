@@ -1,0 +1,225 @@
+{
+  "common": {
+    "all": "Tutte"
+  },
+  "navbar": {
+    "home": "Home",
+    "apartment": "L'Appartamento",
+    "gallery": "Galleria",
+    "excursions": "Escursioni",
+    "availability": "Disponibilità",
+    "assistant": "Assistente Personale",
+    "contact": "Contatti"
+  },
+  "hero": {
+    "title": "Il tuo angolo di pace in Sardegna",
+    "subtitle": "Scopri la bellezza autentica di Torpè. A pochi minuti dal mare cristallino di Posada, immerso nella tranquillità della natura.",
+    "checkAvailability": "Verifica Disponibilità",
+    "askAssistant": "Chiedi all'Assistente Personale",
+    "previousImage": "Immagine precedente",
+    "nextImage": "Immagine successiva",
+    "goToImage": "Vai a immagine"
+  },
+  "features": {
+    "title": "I Nostri Servizi",
+    "subtitle": "Abbiamo curato ogni dettaglio per rendere il tuo soggiorno indimenticabile, combinando il comfort moderno con l'ospitalità tradizionale sarda.",
+    "panoramicView": {
+      "title": "Vista Panoramica",
+      "description": "Goditi tramonti spettacolari sulle colline e il castello della Fava dal terrazzo privato."
+    },
+    "airConditioning": {
+      "title": "Aria Condizionata",
+      "description": "Ambienti freschi e confortevoli in tutte le stanze per il massimo relax estivo."
+    },
+    "wifi": {
+      "title": "Wi-Fi Gratuito",
+      "description": "Connessione ad alta velocità per lavorare in smart working o guardare film in streaming."
+    },
+    "kitchen": {
+      "title": "Cucina Attrezzata",
+      "description": "Tutto il necessario per preparare deliziose cene con prodotti locali sardi."
+    },
+    "parking": {
+      "title": "Parcheggio",
+      "description": "Parcheggio privato gratuito disponibile proprio davanti alla struttura."
+    },
+    "location": {
+      "title": "Posizione Strategica",
+      "description": "A soli 5 minuti dalla superstrada 131 DCN e 10 minuti dalle spiagge."
+    }
+  },
+  "gallery": {
+    "title": "Galleria Fotografica",
+    "subtitle": "Scopri ogni angolo del nostro appartamento attraverso le foto. Un'anteprima del comfort e della bellezza che ti aspettano.",
+    "categories": {
+      "all": "Tutte",
+      "exteriors": "Esterni",
+      "bedrooms": "Camere",
+      "kitchenLiving": "Cucina e Soggiorno",
+      "bathroom": "Bagno"
+    },
+    "closeGallery": "Chiudi galleria",
+    "previousImage": "Immagine precedente",
+    "nextImage": "Immagine successiva",
+    "imageAlt": {
+      "terrace1": "Terrazzo panoramico con vista",
+      "terrace2": "Terrazzo attrezzato per pranzi all'aperto",
+      "bedroom1": "Camera da letto",
+      "bedroom2": "Camera da letto",
+      "kitchen1": "Cucina attrezzata",
+      "kitchen2": "Zona cucina con dettagli",
+      "bathroom": "Bagno con piastrelle in ceramica"
+    }
+  },
+  "excursions": {
+    "title": "Escursioni e Luoghi da Visitare",
+    "subtitle": "Scopri le meraviglie della Sardegna orientale. Spiagge paradisiache, montagne mozzafiato e tesori culturali ti aspettano a pochi chilometri da casa.",
+    "categories": {
+      "all": "Tutte",
+      "beaches": "Spiagge",
+      "natureMountain": "Natura e Montagna",
+      "cultureHistory": "Cultura e Storia",
+      "activities": "Attività"
+    },
+    "excursionTips": "Consigli per le tue escursioni",
+    "excursionTipsText": "La nostra assistente AI <strong>Assistente Personale</strong> può fornirti informazioni dettagliate su orari, prenotazioni e consigli personalizzati per ogni destinazione. Non esitare a contattarci per organizzare la tua esperienza perfetta!",
+    "places": {
+      "calaGoloritze": {
+        "name": "Spiaggia di Cala Goloritzè",
+        "description": "L'incontaminata e selvaggia Cala Goloritzé, testimonial di Baunei, è uno dei tratti costieri del golfo di Orosei dove mare e montagna si incontrano in perfetta armonia."
+      },
+      "calaGinepro": {
+        "name": "Spiaggia di Cala Ginepro",
+        "description": "Una delle spiagge più belle della zona, con sabbia bianca finissima e mare cristallino. Ideale per famiglie e sport acquatici."
+      },
+      "berchida": {
+        "name": "Spiaggia di Berchida",
+        "description": "Spiaggia incontaminata circondata da dune e ginepri, perfetta per chi cerca tranquillità e natura selvaggia."
+      },
+      "calaLiberotto": {
+        "name": "Cala Liberotto",
+        "description": "Piccola baia con acque turchesi e scogli pittoreschi. Ottima per snorkeling e immersioni."
+      },
+      "orosei": {
+        "name": "Spiaggia di Orosei",
+        "description": "Lunga spiaggia di sabbia dorata con tutti i servizi, ristoranti e stabilimenti balneari."
+      },
+      "monteAlbo": {
+        "name": "Monte Albo",
+        "description": "Massiccio calcareo con sentieri panoramici e vista mozzafiato sulla costa orientale. Trekking di vari livelli di difficoltà."
+      },
+      "grotteMonteAlbo": {
+        "name": "Grotte di Monte Albo",
+        "description": "Sistema di grotte naturali con formazioni rocciose spettacolari. Visite guidate disponibili."
+      },
+      "forestaSosNibberos": {
+        "name": "Foresta di Sos Nibberos",
+        "description": "Foresta secolare di lecci e sughere, perfetta per passeggiate naturalistiche e birdwatching."
+      },
+      "oroseiCentro": {
+        "name": "Centro Storico di Orosei",
+        "description": "Borgo medievale con chiese storiche, piazze caratteristiche e architettura tradizionale sarda."
+      },
+      "nuragheLoelle": {
+        "name": "Nuraghe di Loelle",
+        "description": "Sito archeologico nuragico ben conservato, testimonianza dell'antica civiltà sarda."
+      },
+      "chiesaSanPietro": {
+        "name": "Chiesa di San Pietro a Torpè",
+        "description": "Antica chiesa romanica del XII secolo con affreschi e architettura tipica del periodo."
+      },
+      "giroBarca": {
+        "name": "Giro in Barca a Cala Luna",
+        "description": "Escursione in barca alle famose calette del Golfo di Orosei, con possibilità di snorkeling."
+      },
+      "gorropu": {
+        "name": "Trekking Gola di Gorropu",
+        "description": "Uno dei canyon più profondi d'Europa. Esperienza indimenticabile per amanti del trekking."
+      }
+    }
+  },
+  "calendar": {
+    "title": "Verifica Disponibilità",
+    "subtitle": "Consulta il calendario per vedere i giorni liberi. I giorni in verde sono liberi, quelli in rosso sono occupati. Contattaci direttamente per confermare la tua prenotazione.",
+    "notConfigured": "Calendario non configurato. Verifica le variabili d'ambiente (GOOGLE_CALENDAR_ID e GOOGLE_API_KEY).",
+    "previousMonth": "Mese precedente",
+    "nextMonth": "Mese successivo",
+    "loading": "Caricamento...",
+    "noData": "Nessun dato disponibile",
+    "available": "Libero",
+    "occupied": "Occupato",
+    "disclaimer": "* Il calendario è aggiornato periodicamente. Per la certezza assoluta, invia una richiesta.",
+    "months": {
+      "0": "Gennaio",
+      "1": "Febbraio",
+      "2": "Marzo",
+      "3": "Aprile",
+      "4": "Maggio",
+      "5": "Giugno",
+      "6": "Luglio",
+      "7": "Agosto",
+      "8": "Settembre",
+      "9": "Ottobre",
+      "10": "Novembre",
+      "11": "Dicembre"
+    },
+    "days": {
+      "mon": "Lun",
+      "tue": "Mar",
+      "wed": "Mer",
+      "thu": "Gio",
+      "fri": "Ven",
+      "sat": "Sab",
+      "sun": "Dom"
+    },
+    "errors": {
+      "notAccessible": "Il calendario non è accessibile. Assicurati che sia pubblico.",
+      "notFound": "Calendario non trovato. Verifica l'ID del calendario.",
+      "generic": "Errore nel caricamento del calendario. Riprova più tardi.",
+      "connection": "Errore di connessione. Verifica la configurazione.",
+      "instructions": "Per risolvere, segui le istruzioni di configurazione fornite dal supporto."
+    }
+  },
+  "concierge": {
+    "title": "Assistente Personale",
+    "subtitle": "Hai domande su Torpè o sui dintorni? Chiedi a Laura, il nostro assistente AI.",
+    "initialMessage": "Ciao! Sono Laura, il tuo assistente virtuale per Casa Vacanze Torpè. Come posso aiutarti oggi? ",
+    "placeholder": "Chiedi: 'Qual è la spiaggia più vicina?'...",
+    "send": "Invia",
+    "errorMessage": "Scusa, ho avuto un piccolo problema di connessione. Riprova tra poco."
+  },
+  "contact": {
+    "title": "Contattaci",
+    "subtitle": "Siamo a tua disposizione per qualsiasi informazione. Prenota ora la tua vacanza da sogno a Torpè.",
+    "address": "Indirizzo",
+    "addressValue": "Via Lombardia 7, 08020 Torpè (NU)",
+    "email": "Email",
+    "emailValue": "torpe.holidayhome@gmail.com",
+    "whereWeAre": "Dove Siamo",
+    "telegramTitle": "Chatta su Telegram",
+    "telegramDescription": "Preferisci una risposta immediata? Scrivi al nostro bot Telegram per info rapide.",
+    "openTelegram": "Apri Telegram Chatbot",
+    "formTitle": "Invia una richiesta",
+    "formSuccessTitle": "Messaggio inviato con successo!",
+    "formSuccessMessage": "Ti risponderemo via email il prima possibile.",
+    "formErrorTitle": "Errore nell'invio.",
+    "formErrorMessage": "Assicurati che la configurazione Formspree sia corretta e riprova.",
+    "retry": "Riprova",
+    "fullName": "Nome Completo",
+    "fullNamePlaceholder": "Mario Rossi",
+    "emailPlaceholder": "mario@esempio.com",
+    "checkin": "Data Check-in",
+    "checkout": "Data Check-out",
+    "message": "Messaggio",
+    "messagePlaceholder": "Richieste, note, numero ospiti...",
+    "submit": "Invia",
+    "submitting": "Invio in corso...",
+    "configMissingTelegram": "⚠️ Configurazione Mancante\n\nLink Telegram non trovato nelle variabili d'ambiente.",
+    "configMissingFormspree": "⚠️ Configurazione Mancante\n\nEndpoint Formspree non trovato nelle variabili d'ambiente."
+  },
+  "footer": {
+    "copyright": "© {{year}} Tutti i diritti riservati.",
+    "privacy": "Privacy Policy",
+    "terms": "Termini e Condizioni"
+  }
+}
