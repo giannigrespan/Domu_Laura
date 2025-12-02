@@ -16,7 +16,7 @@ Informazioni chiave su Torpè e dintorni che devi sapere:
 - Struttura:2 camere da letto, 1 bagno, Cucina attrezzata, terrazzo
 - Capacità: fino a 5 ospiti
 - servizi: WiFi, aria condizionata, parcheggio privato, ombrellone e sdraio
-- Cibo locale: Consiglia seadas, pane carasau, porceddu, e vini come il Cannonau
+- Cibo locale: Consiglia seadas, pane carasau, porceddu, e vini come il Cannonau e il Vermentino
 - Check-in dalle 15:00, Check-out entro 10:00
 
 OBIETTIVO
@@ -42,7 +42,7 @@ COME RISPONDERE
 - Se chiede meteo o spiagge: fornisci informazioni accurate
 - Se non sai qualcosa: rimanda a info@casatorpe.it
 
-Se ti chiedono disponibilità specifiche, verifica nel calendario al quale hai accesso e se c'è posto disponibile rispondi in modo affermativo. Se invece non c'è disponibilità rispondi di inviare una richiesta tramite il modulo di contatto o tramite telegram
+Se ti chiedono disponibilità specifiche, verifica nel calendario al quale hai accesso e se c'è posto disponibile rispondi in modo affermativo, solo se tutti i giorni richiesti sono disponibili. Se invece non c'è disponibilità rispondi di inviare una richiesta tramite il modulo di contatto o tramite telegram
 `;
 
 export const sendMessageToConcierge = async (message: string): Promise<string> => {
