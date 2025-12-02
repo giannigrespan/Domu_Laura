@@ -13,6 +13,14 @@ interface Excursion {
 const EXCURSIONS: Excursion[] = [
   // Spiagge
   {
+    name: 'Spiaggia di Cala Goloritzè',
+    description: 'L’incontaminata e selvaggia Cala Goloritzé, testimonial di Baunei, è uno dei tratti costieri del golfo di Orosei dove mare e montagna si incontrano in perfetta armonia.',
+    image: '/calagoloritze.jpg',
+    distance: '50 km',
+    category: 'Spiagge',
+    duration: '1 ora'
+  },
+  {
     name: 'Spiaggia di Cala Ginepro',
     description: 'Una delle spiagge più belle della zona, con sabbia bianca finissima e mare cristallino. Ideale per famiglie e sport acquatici.',
     image: '/cala ginepro.jpg',
