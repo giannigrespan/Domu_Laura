@@ -154,7 +154,7 @@ export const Gallery: React.FC = () => {
               onClick={() => openLightbox(index)}
               className="relative group cursor-pointer overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300"
             >
-              <div className="aspect-[4/3] bg-gray-200">
+              <div className="aspect-[4/3] bg-gray-200 overflow-hidden">
                 <img
                   src={image.url}
                   alt={image.alt}
@@ -218,13 +218,13 @@ export const Gallery: React.FC = () => {
 
             {/* Immagine */}
             <div
-              className="relative max-w-6xl max-h-[90vh] w-full"
+              className="relative w-full h-full flex items-center justify-center px-16"
               onClick={(e) => e.stopPropagation()}
             >
               <img
                 src={filteredImages[selectedImage].url}
                 alt={filteredImages[selectedImage].alt}
-                className="w-full h-full object-contain rounded-lg"
+                className="max-w-full max-h-[85vh] w-auto h-auto object-contain rounded-lg shadow-2xl"
               />
               
               {/* Descrizione */}
