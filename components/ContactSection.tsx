@@ -92,15 +92,32 @@ export const ContactSection: React.FC = () => {
               </div>
             </div>
 
+            {/* Google Maps */}
+            <div className="mt-10">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Dove Siamo</h3>
+              <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                <iframe
+                  src="https://maps.google.com/maps?q=Via+Lombardia+7,+08020+Torpè+NU&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="350"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Mappa di Via Lombardia 7, Torpè"
+                ></iframe>
+              </div>
+            </div>
+
             {/* Telegram CTA */}
             <div className="mt-10 p-6 bg-white rounded-xl shadow-md border border-blue-100">
               <h3 className="text-xl font-bold text-gray-900 mb-2">Chatta su Telegram</h3>
               <p className="text-gray-600 mb-4">
                 Preferisci una risposta immediata? Scrivi al nostro bot Telegram per info rapide.
               </p>
-              <a 
+              <a
                 href={TELEGRAM_LINK}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleTelegramClick}
                 className="inline-flex items-center justify-center w-full px-6 py-3 bg-[#0088cc] hover:bg-[#007dbb] text-white font-semibold rounded-lg transition-colors"
