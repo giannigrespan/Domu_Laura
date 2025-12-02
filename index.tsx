@@ -5,6 +5,11 @@ import App from './App';
 
 // Initialize Vercel Web Analytics
 inject();
+import { injectSpeedInsights } from '@vercel/speed-insights';
+import App from './App';
+
+// Inject Vercel Speed Insights
+injectSpeedInsights();
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
