@@ -71,7 +71,7 @@ export const PaymentSection: React.FC = () => {
     if (!paypalContainer || paypalContainer.children.length > 0) return;
 
     (window as any).paypal.Buttons({
-      createOrder: (data: any, actions: any) => {
+      createOrder: (_data: any, actions: any) => {
         return actions.order.create({
           purchase_units: [{
             amount: {
@@ -82,7 +82,7 @@ export const PaymentSection: React.FC = () => {
           }]
         });
       },
-      onApprove: async (data: any, actions: any) => {
+      onApprove: async (_data: any, actions: any) => {
         const order = await actions.order.capture();
         alert(t('payment.paymentSuccess'));
         console.log('Payment completed:', order);
