@@ -8,6 +8,7 @@
     "gallery": "Galerie",
     "excursions": "Ausflüge",
     "availability": "Verfügbarkeit",
+    "payments": "Zahlungen",
     "assistant": "Persönlicher Assistent",
     "contact": "Kontakt"
   },
@@ -217,6 +218,30 @@
     "submitting": "Wird gesendet...",
     "configMissingTelegram": "⚠️ Konfiguration Fehlt\n\nTelegram-Link nicht in Umgebungsvariablen gefunden.",
     "configMissingFormspree": "⚠️ Konfiguration Fehlt\n\nFormspree-Endpunkt nicht in Umgebungsvariablen gefunden."
+  },
+  "payment": {
+    "title": "Zahlungen",
+    "subtitle": "Wählen Sie Ihre bevorzugte Zahlungsmethode, um Ihre Buchung zu bestätigen",
+    "bookingDetails": "Buchungsdetails",
+    "amount": "Betrag",
+    "selectMethod": "Zahlungsmethode Auswählen",
+    "payWithPayPal": "Mit PayPal Bezahlen",
+    "payWithCrypto": "Mit Kryptowährung Bezahlen",
+    "paypalDescription": "Schließen Sie Ihre Zahlung sicher mit Ihrem PayPal-Konto oder Ihrer Kreditkarte ab.",
+    "cryptoDescription": "Senden Sie die Zahlung an die untenstehende Wallet-Adresse. Stellen Sie sicher, dass Sie das richtige Netzwerk verwenden.",
+    "network": "Netzwerk",
+    "walletAddress": "Wallet-Adresse",
+    "copy": "Kopieren",
+    "showQR": "QR-Code Anzeigen",
+    "hideQR": "QR-Code Ausblenden",
+    "addressCopied": "Adresse in die Zwischenablage kopiert!",
+    "paymentSuccess": "Zahlung erfolgreich abgeschlossen!",
+    "paymentError": "Bei der Zahlung ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+    "cryptoWarning": "Stellen Sie sicher, dass Sie nur die angegebene Kryptowährung an das richtige Netzwerk senden. Falsche Sendungen können zum dauerhaften Verlust von Geldern führen.",
+    "contactNote": "Nachdem Sie die Zahlung getätigt haben, kontaktieren Sie uns bitte, um Ihre Buchung zu bestätigen.",
+    "contactUs": "Kontaktieren Sie uns",
+    "configMissingPayPal": "PayPal-Konfiguration fehlt. Fügen Sie VITE_PAYPAL_CLIENT_ID in den Umgebungsvariablen hinzu.",
+    "configMissingCrypto": "Wallet-Adresse nicht konfiguriert. Fügen Sie die Adresse in den Umgebungsvariablen hinzu."
   },
   "footer": {
     "copyright": "© {{year}} Alle Rechte vorbehalten.",

@@ -8,6 +8,7 @@
     "gallery": "Galerie",
     "excursions": "Excursions",
     "availability": "Disponibilité",
+    "payments": "Paiements",
     "assistant": "Assistant Personnel",
     "contact": "Contact"
   },
@@ -217,6 +218,30 @@
     "submitting": "Envoi en cours...",
     "configMissingTelegram": "⚠️ Configuration Manquante\n\nLien Telegram introuvable dans les variables d'environnement.",
     "configMissingFormspree": "⚠️ Configuration Manquante\n\nPoint de terminaison Formspree introuvable dans les variables d'environnement."
+  },
+  "payment": {
+    "title": "Paiements",
+    "subtitle": "Choisissez votre méthode de paiement préférée pour confirmer votre réservation",
+    "bookingDetails": "Détails de la Réservation",
+    "amount": "Montant",
+    "selectMethod": "Sélectionner la Méthode de Paiement",
+    "payWithPayPal": "Payer avec PayPal",
+    "payWithCrypto": "Payer avec Crypto-monnaie",
+    "paypalDescription": "Effectuez votre paiement en toute sécurité en utilisant votre compte PayPal ou carte de crédit.",
+    "cryptoDescription": "Envoyez le paiement à l'adresse du portefeuille ci-dessous. Assurez-vous d'utiliser le bon réseau.",
+    "network": "Réseau",
+    "walletAddress": "Adresse du Portefeuille",
+    "copy": "Copier",
+    "showQR": "Afficher le QR Code",
+    "hideQR": "Masquer le QR Code",
+    "addressCopied": "Adresse copiée dans le presse-papiers!",
+    "paymentSuccess": "Paiement effectué avec succès!",
+    "paymentError": "Une erreur s'est produite lors du paiement. Veuillez réessayer.",
+    "cryptoWarning": "Assurez-vous d'envoyer uniquement la crypto-monnaie spécifiée sur le bon réseau. Les envois incorrects peuvent entraîner une perte permanente des fonds.",
+    "contactNote": "Après avoir effectué le paiement, veuillez nous contacter pour confirmer votre réservation.",
+    "contactUs": "Nous contacter",
+    "configMissingPayPal": "Configuration PayPal manquante. Ajoutez VITE_PAYPAL_CLIENT_ID dans les variables d'environnement.",
+    "configMissingCrypto": "Adresse du portefeuille non configurée. Ajoutez l'adresse dans les variables d'environnement."
   },
   "footer": {
     "copyright": "© {{year}} Tous droits réservés.",

@@ -8,6 +8,7 @@
     "gallery": "Galleria",
     "excursions": "Escursioni",
     "availability": "Disponibilità",
+    "payments": "Pagamenti",
     "assistant": "Assistente Personale",
     "contact": "Contatti"
   },
@@ -217,6 +218,30 @@
     "submitting": "Invio in corso...",
     "configMissingTelegram": "⚠️ Configurazione Mancante\n\nLink Telegram non trovato nelle variabili d'ambiente.",
     "configMissingFormspree": "⚠️ Configurazione Mancante\n\nEndpoint Formspree non trovato nelle variabili d'ambiente."
+  },
+  "payment": {
+    "title": "Pagamenti",
+    "subtitle": "Scegli il metodo di pagamento che preferisci per confermare la tua prenotazione",
+    "bookingDetails": "Dettagli Prenotazione",
+    "amount": "Importo",
+    "selectMethod": "Seleziona Metodo di Pagamento",
+    "payWithPayPal": "Paga con PayPal",
+    "payWithCrypto": "Paga con Criptovaluta",
+    "paypalDescription": "Completa il pagamento in modo sicuro utilizzando il tuo account PayPal o carta di credito.",
+    "cryptoDescription": "Invia il pagamento all'indirizzo wallet sottostante. Assicurati di utilizzare la rete corretta.",
+    "network": "Rete",
+    "walletAddress": "Indirizzo Wallet",
+    "copy": "Copia",
+    "showQR": "Mostra QR Code",
+    "hideQR": "Nascondi QR Code",
+    "addressCopied": "Indirizzo copiato negli appunti!",
+    "paymentSuccess": "Pagamento completato con successo!",
+    "paymentError": "Si è verificato un errore durante il pagamento. Riprova.",
+    "cryptoWarning": "Assicurati di inviare solo la criptovaluta specificata alla rete corretta. Invii errati potrebbero risultare in perdita permanente dei fondi.",
+    "contactNote": "Dopo aver effettuato il pagamento, ti preghiamo di contattarci per confermare la prenotazione.",
+    "contactUs": "Contattaci",
+    "configMissingPayPal": "Configurazione PayPal mancante. Aggiungi VITE_PAYPAL_CLIENT_ID nelle variabili d'ambiente.",
+    "configMissingCrypto": "Indirizzo wallet non configurato. Aggiungi l'indirizzo nelle variabili d'ambiente."
   },
   "footer": {
     "copyright": "© {{year}} Tutti i diritti riservati.",

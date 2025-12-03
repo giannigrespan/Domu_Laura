@@ -8,6 +8,7 @@
     "gallery": "Gallery",
     "excursions": "Excursions",
     "availability": "Availability",
+    "payments": "Payments",
     "assistant": "Personal Assistant",
     "contact": "Contact"
   },
@@ -217,6 +218,30 @@
     "submitting": "Sending...",
     "configMissingTelegram": "⚠️ Missing Configuration\n\nTelegram link not found in environment variables.",
     "configMissingFormspree": "⚠️ Missing Configuration\n\nFormspree endpoint not found in environment variables."
+  },
+  "payment": {
+    "title": "Payments",
+    "subtitle": "Choose your preferred payment method to confirm your booking",
+    "bookingDetails": "Booking Details",
+    "amount": "Amount",
+    "selectMethod": "Select Payment Method",
+    "payWithPayPal": "Pay with PayPal",
+    "payWithCrypto": "Pay with Cryptocurrency",
+    "paypalDescription": "Complete your payment securely using your PayPal account or credit card.",
+    "cryptoDescription": "Send payment to the wallet address below. Make sure to use the correct network.",
+    "network": "Network",
+    "walletAddress": "Wallet Address",
+    "copy": "Copy",
+    "showQR": "Show QR Code",
+    "hideQR": "Hide QR Code",
+    "addressCopied": "Address copied to clipboard!",
+    "paymentSuccess": "Payment completed successfully!",
+    "paymentError": "An error occurred during payment. Please try again.",
+    "cryptoWarning": "Make sure to send only the specified cryptocurrency to the correct network. Incorrect sends may result in permanent loss of funds.",
+    "contactNote": "After making the payment, please contact us to confirm your booking.",
+    "contactUs": "Contact us",
+    "configMissingPayPal": "PayPal configuration missing. Add VITE_PAYPAL_CLIENT_ID in environment variables.",
+    "configMissingCrypto": "Wallet address not configured. Add the address in environment variables."
   },
   "footer": {
     "copyright": "© {{year}} All rights reserved.",

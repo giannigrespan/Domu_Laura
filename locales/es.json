@@ -8,6 +8,7 @@
     "gallery": "Galería",
     "excursions": "Excursiones",
     "availability": "Disponibilidad",
+    "payments": "Pagos",
     "assistant": "Asistente Personal",
     "contact": "Contacto"
   },
@@ -217,6 +218,30 @@
     "submitting": "Enviando...",
     "configMissingTelegram": "⚠️ Configuración Faltante\n\nEnlace de Telegram no encontrado en las variables de entorno.",
     "configMissingFormspree": "⚠️ Configuración Faltante\n\nPunto final de Formspree no encontrado en las variables de entorno."
+  },
+  "payment": {
+    "title": "Pagos",
+    "subtitle": "Elige tu método de pago preferido para confirmar tu reserva",
+    "bookingDetails": "Detalles de la Reserva",
+    "amount": "Importe",
+    "selectMethod": "Seleccionar Método de Pago",
+    "payWithPayPal": "Pagar con PayPal",
+    "payWithCrypto": "Pagar con Criptomoneda",
+    "paypalDescription": "Completa tu pago de forma segura usando tu cuenta PayPal o tarjeta de crédito.",
+    "cryptoDescription": "Envía el pago a la dirección de wallet a continuación. Asegúrate de usar la red correcta.",
+    "network": "Red",
+    "walletAddress": "Dirección de Wallet",
+    "copy": "Copiar",
+    "showQR": "Mostrar Código QR",
+    "hideQR": "Ocultar Código QR",
+    "addressCopied": "¡Dirección copiada al portapapeles!",
+    "paymentSuccess": "¡Pago completado con éxito!",
+    "paymentError": "Se produjo un error durante el pago. Por favor, inténtalo de nuevo.",
+    "cryptoWarning": "Asegúrate de enviar solo la criptomoneda especificada a la red correcta. Los envíos incorrectos pueden resultar en pérdida permanente de fondos.",
+    "contactNote": "Después de realizar el pago, por favor contáctanos para confirmar tu reserva.",
+    "contactUs": "Contáctanos",
+    "configMissingPayPal": "Configuración de PayPal faltante. Agrega VITE_PAYPAL_CLIENT_ID en las variables de entorno.",
+    "configMissingCrypto": "Dirección de wallet no configurada. Agrega la dirección en las variables de entorno."
   },
   "footer": {
     "copyright": "© {{year}} Todos los derechos reservados.",
