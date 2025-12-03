@@ -109,6 +109,25 @@ export const Hero: React.FC = () => {
           ))}
         </div>
       </div>
+
+      {/* Scroll Down Arrow */}
+      <a
+        href="#features"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce cursor-pointer group"
+        aria-label={t('hero.scrollDown')}
+      >
+        <div className="flex flex-col items-center">
+          <svg
+            className="w-12 h-12 text-white drop-shadow-lg group-hover:text-gray-200 transition-colors"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2.5}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7-7-7" />
+          </svg>
+        </div>
+      </a>
     </div>
   );
 };

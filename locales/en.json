@@ -18,7 +18,8 @@
     "askAssistant": "Ask the Personal Assistant",
     "previousImage": "Previous image",
     "nextImage": "Next image",
-    "goToImage": "Go to image"
+    "goToImage": "Go to image",
+    "scrollDown": "Scroll down"
   },
   "features": {
     "title": "Our Services",
@@ -45,7 +46,7 @@
     },
     "location": {
       "title": "Strategic Location",
-      "description": "Just 5 minutes from the 131 DCN highway and 10 minutes from the beaches."
+      "description": "Just 5 minutes from the Olbia - Cagliari highway, 25 minutes from Olbia-Costa Smeralda airport, 10 minutes from the beach."
     }
   },
   "gallery": {

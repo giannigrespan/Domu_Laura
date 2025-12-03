@@ -18,7 +18,8 @@
     "askAssistant": "Pregunta al Asistente Personal",
     "previousImage": "Imagen anterior",
     "nextImage": "Siguiente imagen",
-    "goToImage": "Ir a imagen"
+    "goToImage": "Ir a imagen",
+    "scrollDown": "Desplazar hacia abajo"
   },
   "features": {
     "title": "Nuestros Servicios",
@@ -45,7 +46,7 @@
     },
     "location": {
       "title": "Posición Estratégica",
-      "description": "A solo 5 minutos de la autopista 131 DCN y 10 minutos de las playas."
+      "description": "A solo 5 minutos de la autopista Olbia - Cagliari, 25 minutos del aeropuerto Olbia-Costa Smeralda, 10 minutos de la playa."
     }
   },
   "gallery": {

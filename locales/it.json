@@ -18,7 +18,8 @@
     "askAssistant": "Chiedi all'Assistente Personale",
     "previousImage": "Immagine precedente",
     "nextImage": "Immagine successiva",
-    "goToImage": "Vai a immagine"
+    "goToImage": "Vai a immagine",
+    "scrollDown": "Scorri verso il basso"
   },
   "features": {
     "title": "I Nostri Servizi",
@@ -45,7 +46,7 @@
     },
     "location": {
       "title": "Posizione Strategica",
-      "description": "A soli 5 minuti dalla superstrada 131 DCN e 10 minuti dalle spiagge."
+      "description": "A soli 5 minuti dalla superstrada Olbia - Cagliari, 25 minuti dall'aeroporto Olbia-Costa Smeralda, 10 minuti dalla spiaggia."
     }
   },
   "gallery": {

@@ -18,7 +18,8 @@
     "askAssistant": "Frag den Persönlichen Assistenten",
     "previousImage": "Vorheriges Bild",
     "nextImage": "Nächstes Bild",
-    "goToImage": "Zu Bild gehen"
+    "goToImage": "Zu Bild gehen",
+    "scrollDown": "Nach unten scrollen"
   },
   "features": {
     "title": "Unsere Services",
@@ -45,7 +46,7 @@
     },
     "location": {
       "title": "Strategische Lage",
-      "description": "Nur 5 Minuten von der Schnellstraße 131 DCN und 10 Minuten von den Stränden entfernt."
+      "description": "Nur 5 Minuten von der Autobahn Olbia - Cagliari, 25 Minuten vom Flughafen Olbia-Costa Smeralda, 10 Minuten vom Strand entfernt."
     }
   },
   "gallery": {

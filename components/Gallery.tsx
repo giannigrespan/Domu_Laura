@@ -193,12 +193,15 @@ export const Gallery: React.FC = () => {
           >
             {/* Pulsante Chiudi */}
             <button
-              onClick={closeLightbox}
-              className="absolute top-4 right-4 z-60 p-2 bg-white/10 hover:bg-white/20 rounded-full transition-all"
+              onClick={(e) => {
+                e.stopPropagation();
+                closeLightbox();
+              }}
+              className="absolute top-4 right-4 z-[70] p-3 bg-white/20 hover:bg-white/40 rounded-full transition-all shadow-lg"
               aria-label={t('gallery.closeGallery')}
             >
-              <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
 
