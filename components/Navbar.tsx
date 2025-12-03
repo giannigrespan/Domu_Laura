@@ -61,7 +61,7 @@ export const Navbar: React.FC = () => {
                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
                 className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-sardinia-sea transition-colors"
               >
-                <span className="text-2xl leading-none">{currentLanguage.flag}</span>
+                <span className="text-2xl leading-none flag-emoji">{currentLanguage.flag}</span>
                 <span>{currentLanguage.name}</span>
                 <svg className={`w-4 h-4 transition-transform ${isLangMenuOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -78,7 +78,7 @@ export const Navbar: React.FC = () => {
                         i18n.language === lang.code ? 'bg-sardinia-sea/10 text-sardinia-sea' : 'text-gray-700'
                       }`}
                     >
-                      <span className="text-xl">{lang.flag}</span>
+                      <span className="text-xl flag-emoji">{lang.flag}</span>
                       <span>{lang.name}</span>
                     </button>
                   ))}
@@ -95,7 +95,7 @@ export const Navbar: React.FC = () => {
                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
                 className="p-2 text-gray-600 hover:text-gray-900"
               >
-                <span className="text-xl">{currentLanguage.flag}</span>
+                <span className="text-xl flag-emoji">{currentLanguage.flag}</span>
               </button>
 
               {isLangMenuOpen && (
@@ -108,7 +108,7 @@ export const Navbar: React.FC = () => {
                         i18n.language === lang.code ? 'bg-sardinia-sea/10 text-sardinia-sea' : 'text-gray-700'
                       }`}
                     >
-                      <span className="text-xl">{lang.flag}</span>
+                      <span className="text-xl flag-emoji">{lang.flag}</span>
                       <span>{lang.name}</span>
                     </button>
                   ))}
