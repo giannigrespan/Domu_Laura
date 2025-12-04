@@ -200,6 +200,9 @@
     "telegramTitle": "Chatta su Telegram",
     "telegramDescription": "Preferisci una risposta immediata? Scrivi al nostro bot Telegram per info rapide.",
     "openTelegram": "Apri Telegram Chatbot",
+    "whatsappTitle": "Chatta su WhatsApp",
+    "whatsappDescription": "Preferisci WhatsApp? Contattaci direttamente per info e prenotazioni.",
+    "openWhatsapp": "Apri WhatsApp Chat",
     "formTitle": "Invia una richiesta",
     "formSuccessTitle": "Messaggio inviato con successo!",
     "formSuccessMessage": "Ti risponderemo via email il prima possibile.",
@@ -216,6 +219,7 @@
     "submit": "Invia",
     "submitting": "Invio in corso...",
     "configMissingTelegram": "⚠️ Configurazione Mancante\n\nLink Telegram non trovato nelle variabili d'ambiente.",
+    "configMissingWhatsapp": "⚠️ Configurazione Mancante\n\nLink WhatsApp non trovato nelle variabili d'ambiente.",
     "configMissingFormspree": "⚠️ Configurazione Mancante\n\nEndpoint Formspree non trovato nelle variabili d'ambiente."
   },
   "footer": {

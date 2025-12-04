@@ -200,6 +200,9 @@
     "telegramTitle": "Discutez sur Telegram",
     "telegramDescription": "Vous préférez une réponse immédiate? Écrivez à notre bot Telegram pour des informations rapides.",
     "openTelegram": "Ouvrir le Chatbot Telegram",
+    "whatsappTitle": "Discutez sur WhatsApp",
+    "whatsappDescription": "Vous préférez WhatsApp? Contactez-nous directement pour des informations et des réservations.",
+    "openWhatsapp": "Ouvrir WhatsApp Chat",
     "formTitle": "Envoyer une demande",
     "formSuccessTitle": "Message envoyé avec succès!",
     "formSuccessMessage": "Nous vous répondrons par email dès que possible.",
@@ -216,6 +219,7 @@
     "submit": "Envoyer",
     "submitting": "Envoi en cours...",
     "configMissingTelegram": "⚠️ Configuration Manquante\n\nLien Telegram introuvable dans les variables d'environnement.",
+    "configMissingWhatsapp": "⚠️ Configuration Manquante\n\nLien WhatsApp introuvable dans les variables d'environnement.",
     "configMissingFormspree": "⚠️ Configuration Manquante\n\nPoint de terminaison Formspree introuvable dans les variables d'environnement."
   },
   "footer": {

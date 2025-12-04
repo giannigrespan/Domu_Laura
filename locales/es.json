@@ -200,6 +200,9 @@
     "telegramTitle": "Chat en Telegram",
     "telegramDescription": "¿Prefieres una respuesta inmediata? Escribe a nuestro bot de Telegram para información rápida.",
     "openTelegram": "Abrir Bot de Telegram",
+    "whatsappTitle": "Chat en WhatsApp",
+    "whatsappDescription": "¿Prefieres WhatsApp? Contáctanos directamente para información y reservas.",
+    "openWhatsapp": "Abrir WhatsApp Chat",
     "formTitle": "Enviar una solicitud",
     "formSuccessTitle": "¡Mensaje enviado con éxito!",
     "formSuccessMessage": "Te responderemos por correo electrónico lo antes posible.",
@@ -216,6 +219,7 @@
     "submit": "Enviar",
     "submitting": "Enviando...",
     "configMissingTelegram": "⚠️ Configuración Faltante\n\nEnlace de Telegram no encontrado en las variables de entorno.",
+    "configMissingWhatsapp": "⚠️ Configuración Faltante\n\nEnlace de WhatsApp no encontrado en las variables de entorno.",
     "configMissingFormspree": "⚠️ Configuración Faltante\n\nPunto final de Formspree no encontrado en las variables de entorno."
   },
   "footer": {

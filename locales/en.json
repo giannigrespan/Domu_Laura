@@ -200,6 +200,9 @@
     "telegramTitle": "Chat on Telegram",
     "telegramDescription": "Prefer an immediate response? Write to our Telegram bot for quick info.",
     "openTelegram": "Open Telegram Chatbot",
+    "whatsappTitle": "Chat on WhatsApp",
+    "whatsappDescription": "Prefer WhatsApp? Contact us directly for info and bookings.",
+    "openWhatsapp": "Open WhatsApp Chat",
     "formTitle": "Send a Request",
     "formSuccessTitle": "Message sent successfully!",
     "formSuccessMessage": "We will reply via email as soon as possible.",
@@ -216,6 +219,7 @@
     "submit": "Send",
     "submitting": "Sending...",
     "configMissingTelegram": "⚠️ Missing Configuration\n\nTelegram link not found in environment variables.",
+    "configMissingWhatsapp": "⚠️ Missing Configuration\n\nWhatsApp link not found in environment variables.",
     "configMissingFormspree": "⚠️ Missing Configuration\n\nFormspree endpoint not found in environment variables."
   },
   "footer": {

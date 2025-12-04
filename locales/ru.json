@@ -200,6 +200,9 @@
     "telegramTitle": "Чат в Telegram",
     "telegramDescription": "Предпочитаете немедленный ответ? Напишите нашему боту Telegram для быстрой информации.",
     "openTelegram": "Открыть Telegram Chatbot",
+    "whatsappTitle": "Чат в WhatsApp",
+    "whatsappDescription": "Предпочитаете WhatsApp? Свяжитесь с нами напрямую для информации и бронирования.",
+    "openWhatsapp": "Открыть WhatsApp Chat",
     "formTitle": "Отправить запрос",
     "formSuccessTitle": "Сообщение успешно отправлено!",
     "formSuccessMessage": "Мы ответим вам по электронной почте как можно скорее.",
@@ -216,6 +219,7 @@
     "submit": "Отправить",
     "submitting": "Отправка...",
     "configMissingTelegram": "⚠️ Отсутствует Конфигурация\n\nСсылка на Telegram не найдена в переменных окружения.",
+    "configMissingWhatsapp": "⚠️ Отсутствует Конфигурация\n\nСсылка на WhatsApp не найдена в переменных окружения.",
     "configMissingFormspree": "⚠️ Отсутствует Конфигурация\n\nКонечная точка Formspree не найдена в переменных окружения."
   },
   "footer": {
