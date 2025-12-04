@@ -17,6 +17,7 @@ declare const process: {
     readonly GOOGLE_CALENDAR_ID: string;
     readonly GOOGLE_API_KEY: string;
     readonly TELEGRAM_LINK: string;
+    readonly WHATSAPP_LINK: string;
     readonly FORMSPREE_ENDPOINT: string;
   };
 };
