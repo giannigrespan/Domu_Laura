@@ -28,7 +28,7 @@ const EXCURSIONS: Excursion[] = [
   },
   {
     translationKey: 'excursions.places.calaBrandinchi',
-    image: '/Cala-Brandinchi.webp,
+    image: '/Cala-Brandinchi.webp',
     distance: '14 km',
     category: 'beaches',
     duration: '20 min'
