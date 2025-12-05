@@ -5,10 +5,7 @@ import { NavItem } from '../types';
 const LANGUAGES = [
   { code: 'it', name: 'IT', flag: '🇮🇹' },
   { code: 'en', name: 'EN', flag: '🇬🇧' },
-  { code: 'fr', name: 'FR', flag: '🇫🇷' },
-  { code: 'de', name: 'DE', flag: '🇩🇪' },
-  { code: 'es', name: 'ES', flag: '🇪🇸' },
-  { code: 'ru', name: 'RU', flag: '🇷🇺' }
+  { code: 'de', name: 'DE', flag: '🇩🇪' }
 ];
 
 export const Navbar: React.FC = () => {

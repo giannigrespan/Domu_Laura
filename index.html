@@ -2,7 +2,7 @@
 <html lang="it">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
     <title>Casa Vacanze Torpè - Sardegna</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -29,10 +29,23 @@
     <style>
       html {
         scroll-behavior: smooth;
+        /* Previene zoom con doppio tap su iOS */
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
       }
       /* Previene auto-scroll indesiderato al caricamento */
       body {
         overflow-x: hidden;
+        /* Ottimizza il touch su mobile */
+        touch-action: manipulation;
+      }
+      /* Previene che elementi larghi causino scroll orizzontale */
+      * {
+        max-width: 100%;
+      }
+      /* Eccezione per elementi che devono avere larghezza piena */
+      html, body, #root {
+        max-width: none;
       }
       /* Forza il rendering corretto delle emoji bandiere */
       .flag-emoji {
