@@ -15,6 +15,7 @@ export default defineConfig(({ mode }) => {
       'process.env.GOOGLE_CALENDAR_ID': JSON.stringify(env.GOOGLE_CALENDAR_ID),
       'process.env.GOOGLE_API_KEY': JSON.stringify(env.GOOGLE_API_KEY),
       'process.env.TELEGRAM_LINK': JSON.stringify(env.TELEGRAM_LINK),
+      'process.env.WHATSAPP_LINK': JSON.stringify(env.WHATSAPP_LINK),
       'process.env.FORMSPREE_ENDPOINT': JSON.stringify(env.FORMSPREE_ENDPOINT),
     }
   }
