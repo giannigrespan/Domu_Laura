@@ -55,7 +55,7 @@ const GALLERY_IMAGES: GalleryImage[] = [
 
   // Bagno
   {
-    url: '/bagno-1.webp',
+    url: '/bagno-1.png',
     alt: 'Bagno con piastrelle in ceramica',
     category: 'Bagno'
   }
