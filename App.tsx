@@ -8,6 +8,7 @@ import { CalendarSection } from './components/CalendarSection';
 import { Concierge } from './components/Concierge';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
+import { FloatingContactButtons } from './components/FloatingContactButtons';
 
 const App: React.FC = () => {
   // Fix per auto-scroll indesiderato al caricamento
@@ -36,6 +37,7 @@ const App: React.FC = () => {
         <ContactSection />
       </main>
       <Footer />
+      <FloatingContactButtons />
     </div>
   );
 };
