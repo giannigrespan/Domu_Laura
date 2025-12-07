@@ -74,10 +74,10 @@ export const Excursions: React.FC = () => {
     : EXCURSIONS.filter(exc => exc.category === selectedCategory);
 
   return (
-    <section id="excursions" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section id="excursions" className="py-10 md:py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-6 md:mb-12">
           <h2 className="text-3xl font-serif font-bold text-gray-900 mb-4">
             {t('excursions.title')}
           </h2>
@@ -87,7 +87,7 @@ export const Excursions: React.FC = () => {
         </div>
 
         {/* Filtri Categoria */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex flex-wrap justify-center gap-3 mb-6 md:mb-12">
           {categories.map((category) => (
             <button
               key={category}

@@ -65,9 +65,9 @@ export const Concierge: React.FC = () => {
   };
 
   return (
-    <section id="concierge" className="py-20 bg-sardinia-sea/5">
+    <section id="concierge" className="py-10 md:py-20 bg-sardinia-sea/5">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10">
+        <div className="text-center mb-6 md:mb-10">
           <h2 className="text-3xl font-serif font-bold text-gray-900 mb-2">{t('concierge.title')}</h2>
           <p className="text-gray-600">{t('concierge.subtitle')}</p>
         </div>

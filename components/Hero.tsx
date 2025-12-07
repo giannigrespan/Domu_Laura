@@ -5,7 +5,7 @@ export const Hero: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <div id="home" className="relative h-screen min-h-[600px] flex items-center justify-center bg-gray-900">
+    <div id="home" className="relative h-screen min-h-[400px] md:min-h-[600px] flex items-center justify-center bg-gray-900">
       {/* Single Background Image with Fade Effect */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center animate-fade-in"

@@ -48,9 +48,9 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-sardinia-sand/20">
+    <section id="contact" className="py-10 md:py-20 bg-sardinia-sand/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
           
           {/* Contact Info & Telegram */}
           <div>

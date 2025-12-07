@@ -142,9 +142,9 @@ export const CalendarSection: React.FC = () => {
   ];
 
   return (
-    <section id="calendar" className="py-16 bg-white">
+    <section id="calendar" className="py-8 md:py-16 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8">
+        <div className="text-center mb-4 md:mb-8">
           <h2 className="text-2xl font-serif font-bold text-gray-900 mb-3">{t('calendar.title')}</h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-sm">
             {t('calendar.subtitle')}

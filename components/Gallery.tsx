@@ -92,10 +92,10 @@ export const Gallery: React.FC = () => {
     : GALLERY_IMAGES.filter(img => img.category === selectedCategory);
 
   return (
-    <section id="gallery" className="py-20 bg-white">
+    <section id="gallery" className="py-10 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-6 md:mb-12">
           <h2 className="text-3xl font-serif font-bold text-gray-900 mb-4">
             {t('gallery.title')}
           </h2>
@@ -105,7 +105,7 @@ export const Gallery: React.FC = () => {
         </div>
 
         {/* Filtri Categoria */}
-        <div className="flex flex-wrap justify-center gap-3 mb-10">
+        <div className="flex flex-wrap justify-center gap-3 mb-6 md:mb-10">
           {categories.map((category) => (
             <button
               key={category}
