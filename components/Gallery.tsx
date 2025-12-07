@@ -46,7 +46,7 @@ const GALLERY_IMAGES: GalleryImage[] = [
     category: 'Camere'
   },
  {
-    url: '/camera-2.png',
+    url: '/camera2.jpg',
     alt: 'Camera da letto',
     category: 'Camere'
   },
