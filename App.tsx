@@ -29,8 +29,8 @@ const App: React.FC = () => {
       <Navbar />
       <main>
         <Hero />
-        <Features />
         <Gallery />
+        <Features />
         <Excursions />
         <CalendarSection />
         <Concierge />
