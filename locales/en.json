@@ -31,6 +31,17 @@
   "features": {
     "title": "Our Services",
     "subtitle": "We have taken care of every detail to make your stay unforgettable, combining modern comfort with traditional Sardinian hospitality.",
+    "apartmentDetails": {
+      "title": "Apartment Details",
+      "surface": "80 sqm",
+      "surfaceLabel": "Surface",
+      "bedrooms": "2",
+      "bedroomsLabel": "Bedrooms",
+      "bathrooms": "1",
+      "bathroomsLabel": "Bathroom",
+      "guests": "4-6",
+      "guestsLabel": "Guests"
+    },
     "panoramicView": {
       "title": "Panoramic View",
       "description": "Enjoy spectacular sunsets over the hills and the Fava castle from the private terrace."
@@ -54,6 +65,26 @@
     "location": {
       "title": "Strategic Location",
       "description": "Just 5 minutes from the Olbia - Cagliari highway, 25 minutes from Olbia-Costa Smeralda airport, 10 minutes from the beach."
+    },
+    "washingMachine": {
+      "title": "Washing Machine",
+      "description": "Washing machine available for your convenience during your stay."
+    },
+    "smartTV": {
+      "title": "Smart TV",
+      "description": "Smart TV to watch your favorite movies and series on streaming."
+    },
+    "terrace": {
+      "title": "Furnished Terrace",
+      "description": "Equipped outdoor space perfect for outdoor dinners and relaxing moments."
+    },
+    "heating": {
+      "title": "Heating",
+      "description": "Heating in all rooms for maximum comfort even in winter."
+    },
+    "linens": {
+      "title": "Linens Included",
+      "description": "Bed sheets, towels and kitchen linens provided and included in the price."
     }
   },
   "gallery": {

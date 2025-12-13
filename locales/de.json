@@ -31,6 +31,17 @@
   "features": {
     "title": "Unsere Services",
     "subtitle": "Wir haben jedes Detail berücksichtigt, um Ihren Aufenthalt unvergesslich zu gestalten und kombinieren modernen Komfort mit authentischer sardischer Gastfreundschaft.",
+    "apartmentDetails": {
+      "title": "Wohnungsdetails",
+      "surface": "80 qm",
+      "surfaceLabel": "Fläche",
+      "bedrooms": "2",
+      "bedroomsLabel": "Schlafzimmer",
+      "bathrooms": "1",
+      "bathroomsLabel": "Badezimmer",
+      "guests": "4-6",
+      "guestsLabel": "Gäste"
+    },
     "panoramicView": {
       "title": "Panoramablick",
       "description": "Genießen Sie spektakuläre Sonnenuntergänge über die Hügel und die Burg der Fava von der privaten Terrasse."
@@ -54,6 +65,26 @@
     "location": {
       "title": "Strategische Lage",
       "description": "Nur 5 Minuten von der Autobahn Olbia - Cagliari, 25 Minuten vom Flughafen Olbia-Costa Smeralda, 10 Minuten vom Strand entfernt."
+    },
+    "washingMachine": {
+      "title": "Waschmaschine",
+      "description": "Waschmaschine für Ihre Bequemlichkeit während Ihres Aufenthalts verfügbar."
+    },
+    "smartTV": {
+      "title": "Smart TV",
+      "description": "Smart TV zum Anschauen Ihrer Lieblingsfilme und -serien im Streaming."
+    },
+    "terrace": {
+      "title": "Möblierte Terrasse",
+      "description": "Ausgestatteter Außenbereich perfekt für Abendessen im Freien und entspannende Momente."
+    },
+    "heating": {
+      "title": "Heizung",
+      "description": "Heizung in allen Räumen für maximalen Komfort auch im Winter."
+    },
+    "linens": {
+      "title": "Bettwäsche Inklusive",
+      "description": "Bettwäsche, Handtücher und Küchenwäsche sind im Preis inbegriffen."
     }
   },
   "gallery": {
