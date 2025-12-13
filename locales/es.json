@@ -12,21 +12,14 @@
     "contact": "Contacto"
   },
   "hero": {
-    "title": "Domu Laura",
-    "subtitle": "Un refugio luminoso entre mar y naturaleza, para quienes buscan quietud y autenticidad. Tu base ideal para descubrir la Cerdeña más auténtica, lejos de las multitudes.",
+    "title": "Tu rincón de paz en Cerdeña",
+    "subtitle": "Descubre la belleza auténtica de Torpè. A pocos minutos del mar cristalino de Posada, sumergido en la tranquilidad de la naturaleza.",
     "checkAvailability": "Verificar Disponibilidad",
     "askAssistant": "Pregunta al Asistente Personal",
     "previousImage": "Imagen anterior",
     "nextImage": "Siguiente imagen",
     "goToImage": "Ir a imagen",
     "scrollDown": "Desplazar hacia abajo"
-  },
-  "idealFor": {
-    "title": "Perfecto Para",
-    "couples": "Parejas que buscan tranquilidad",
-    "families": "Familias que quieren espacio y silencio",
-    "beachLovers": "Quienes aman el mar pero no el caos",
-    "remoteWorkers": "Quienes trabajan remotamente y quieren luz y calma"
   },
   "features": {
     "title": "Nuestros Servicios",
@@ -191,7 +184,7 @@
   "concierge": {
     "title": "Asistente Personal",
     "subtitle": "¿Tienes preguntas sobre Torpè o sus alrededores? Pregunta a Laura, nuestro asistente IA.",
-    "initialMessage": "¡Hola! Soy Laura, tu asistente virtual para Domu Laura. ¿Cómo puedo ayudarte hoy?",
+    "initialMessage": "¡Hola! Soy Laura, tu asistente virtual para Casa Vacaciones Torpè. ¿Cómo puedo ayudarte hoy?",
     "placeholder": "Pregunta: '¿Cuál es la playa más cercana?'...",
     "send": "Enviar",
     "errorMessage": "Disculpa, tuve un pequeño problema de conexión. Intenta de nuevo en breve."
