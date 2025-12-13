@@ -12,14 +12,21 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Your peaceful corner in Sardinia",
-    "subtitle": "Discover the authentic beauty of Torpè. Just minutes from the crystal-clear sea of Posada, immersed in the tranquility of nature.",
+    "title": "Domu Laura",
+    "subtitle": "A bright refuge between sea and nature, for those seeking peace and authenticity. Your ideal base to discover the real Sardinia, away from the crowds.",
     "checkAvailability": "Check Availability",
     "askAssistant": "Ask the Personal Assistant",
     "previousImage": "Previous image",
     "nextImage": "Next image",
     "goToImage": "Go to image",
     "scrollDown": "Scroll down"
+  },
+  "idealFor": {
+    "title": "Perfect For",
+    "couples": "Couples seeking tranquility",
+    "families": "Families who want space and silence",
+    "beachLovers": "Those who love the sea but not the chaos",
+    "remoteWorkers": "Remote workers who want light and calm"
   },
   "features": {
     "title": "Our Services",
@@ -184,7 +191,7 @@
   "concierge": {
     "title": "Personal Assistant",
     "subtitle": "Do you have questions about Torpè or the surroundings? Ask Laura, our AI assistant.",
-    "initialMessage": "Hello! I'm Laura, your virtual assistant for Casa Vacanze Torpè. How can I help you today? ",
+    "initialMessage": "Hello! I'm Laura, your virtual assistant for Domu Laura. How can I help you today? ",
     "placeholder": "Ask: 'What is the nearest beach?'...",
     "send": "Send",
     "errorMessage": "Sorry, I had a small connection problem. Please try again soon."

@@ -12,14 +12,21 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "title": "Deine Ecke des Friedens auf Sardinien",
-    "subtitle": "Entdecke die authentische Schönheit von Torpè. Nur wenige Minuten vom kristallklaren Meer von Posada entfernt, eingebettet in der Ruhe der Natur.",
+    "title": "Domu Laura",
+    "subtitle": "Ein helles Refugium zwischen Meer und Natur, für diejenigen, die Ruhe und Authentizität suchen. Ihre ideale Basis, um das echte Sardinien abseits der Massen zu entdecken.",
     "checkAvailability": "Verfügbarkeit prüfen",
     "askAssistant": "Frag den Persönlichen Assistenten",
     "previousImage": "Vorheriges Bild",
     "nextImage": "Nächstes Bild",
     "goToImage": "Zu Bild gehen",
     "scrollDown": "Nach unten scrollen"
+  },
+  "idealFor": {
+    "title": "Perfekt Für",
+    "couples": "Paare, die Ruhe suchen",
+    "families": "Familien, die Raum und Stille wollen",
+    "beachLovers": "Menschen, die das Meer lieben, aber nicht das Chaos",
+    "remoteWorkers": "Remote-Arbeiter, die Licht und Ruhe wollen"
   },
   "features": {
     "title": "Unsere Services",
@@ -184,7 +191,7 @@
   "concierge": {
     "title": "Persönlicher Assistent",
     "subtitle": "Haben Sie Fragen zu Torpè oder der Umgebung? Fragen Sie Laura, unsere KI-Assistentin.",
-    "initialMessage": "Hallo! Ich bin Laura, Ihre virtuelle Assistentin für Casa Vacanze Torpè. Wie kann ich Ihnen heute helfen?",
+    "initialMessage": "Hallo! Ich bin Laura, Ihre virtuelle Assistentin für Domu Laura. Wie kann ich Ihnen heute helfen?",
     "placeholder": "Fragen Sie: 'Welcher ist der nächste Strand?'...",
     "send": "Senden",
     "errorMessage": "Entschuldigung, ich hatte ein kleines Verbindungsproblem. Bitte versuchen Sie es später erneut."
