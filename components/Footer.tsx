@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <span className="text-2xl font-serif font-bold">Casa Torpè</span>
+            <span className="text-2xl font-serif font-bold">Domu Laura</span>
             <p className="text-gray-400 text-sm mt-2">{t('footer.copyright', { year: new Date().getFullYear() })}</p>
           </div>
           <div className="flex space-x-6 text-sm text-gray-400">

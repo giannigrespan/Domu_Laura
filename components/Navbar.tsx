@@ -36,7 +36,7 @@ export const Navbar: React.FC = () => {
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 flex items-center">
             <span className="font-serif text-2xl font-bold text-sardinia-sea">
-              Casa Torpè
+              Domu Laura
             </span>
           </div>
           
