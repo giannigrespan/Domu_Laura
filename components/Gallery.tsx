@@ -29,7 +29,7 @@ const GALLERY_IMAGES: GalleryImage[] = [
     category: 'Esterni'
   },
   {
-    url: '/terrazzo-1.webp',
+    url: '/terrazzo1.webp',
     alt: 'Terrazzo panoramico con vista',
     category: 'Esterni'
   },
