@@ -29,15 +29,11 @@ const GALLERY_IMAGES: GalleryImage[] = [
     category: 'Esterni'
   },
   {
-    url: '/terrazzo1.webp',
+    url: '/terrazzo1.jpg',
     alt: 'Terrazzo panoramico con vista',
     category: 'Esterni'
   },
-  {
-    url: '/terrazzino-1.jpg',
-    alt: 'Terrazzo attrezzato per pranzi all\'aperto',
-    category: 'Esterni'
-  },
+  
   
   // Cucina e Soggiorno
   {
