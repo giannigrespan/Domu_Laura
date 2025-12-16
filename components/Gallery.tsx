@@ -37,19 +37,19 @@ const GALLERY_IMAGES: GalleryImage[] = [
   
   // Cucina e Soggiorno
   {
-    url: '/cucina-1.webp',
+    url: '/1765898323307_web.jpg',
     alt: 'Cucina attrezzata',
     category: 'Cucina e Soggiorno'
   },
   {
-    url: '/cucina-2.webp',
+    url: '/1765897883897_web.jpg',
     alt: 'Zona cucina con dettagli',
     category: 'Cucina e Soggiorno'
   },
   
   // Camere
   {
-    url: '/camera-1.webp',
+    url: '/1765897703169_web.jpg',
     alt: 'Camera da letto',
     category: 'Camere'
   },
