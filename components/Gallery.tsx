@@ -20,12 +20,12 @@ const GALLERY_IMAGES: GalleryImage[] = [
   // Esterni
   {
     url: '/esterno-cortile.webp',
-    alt: 'Cortile interno del residence con ulivi',
+    alt: 'Ingresso del residence con cancello',
     category: 'Esterni'
   },
   {
-    url: '/esterno-ingresso.webp',
-    alt: 'Ingresso del residence con cancello',
+    url: '/Albero_web.jpg',
+    alt: 'interno con ulivo',
     category: 'Esterni'
   },
   {
@@ -37,6 +37,18 @@ const GALLERY_IMAGES: GalleryImage[] = [
     url: '/terrazzino-1.webp',
     alt: 'Terrazzo attrezzato per pranzi all\'aperto',
     category: 'Esterni'
+  },
+  
+  // Cucina e Soggiorno
+  {
+    url: '/cucina-1.webp',
+    alt: 'Cucina attrezzata',
+    category: 'Cucina e Soggiorno'
+  },
+  {
+    url: '/cucina-2.webp',
+    alt: 'Zona cucina con dettagli',
+    category: 'Cucina e Soggiorno'
   },
   
   // Camere
@@ -51,17 +63,7 @@ const GALLERY_IMAGES: GalleryImage[] = [
     category: 'Camere'
   },
 
-  // Cucina e Soggiorno
-  {
-    url: '/cucina-1.webp',
-    alt: 'Cucina attrezzata',
-    category: 'Cucina e Soggiorno'
-  },
-  {
-    url: '/cucina-2.webp',
-    alt: 'Zona cucina con dettagli',
-    category: 'Cucina e Soggiorno'
-  },
+  
 
   // Bagno
   {
