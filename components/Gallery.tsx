@@ -24,7 +24,7 @@ const GALLERY_IMAGES: GalleryImage[] = [
     category: 'Esterni'
   },
   {
-    url: '/Albero_web.jpg',
+    url: '/appfuori_web.jpg',
     alt: 'interno con ulivo',
     category: 'Esterni'
   },
