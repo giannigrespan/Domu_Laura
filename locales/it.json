@@ -31,6 +31,17 @@
   "features": {
     "title": "I Nostri Servizi",
     "subtitle": "Abbiamo curato ogni dettaglio per rendere il tuo soggiorno indimenticabile, combinando il comfort moderno con l'ospitalità tradizionale sarda.",
+    "apartmentDetails": {
+      "title": "Dettagli Appartamento",
+      "surface": "80 mq",
+      "surfaceLabel": "Superficie",
+      "bedrooms": "2",
+      "bedroomsLabel": "Camere",
+      "bathrooms": "1",
+      "bathroomsLabel": "Bagno",
+      "guests": "4-6",
+      "guestsLabel": "Ospiti"
+    },
     "panoramicView": {
       "title": "Vista Panoramica",
       "description": "Terrazzo in camera per il tuo caffè e colazione con privacy o leggere libro la sera."
@@ -54,6 +65,26 @@
     "location": {
       "title": "Posizione Strategica",
       "description": "A soli 5 minuti dalla superstrada Olbia - Cagliari, 25 minuti dall'aeroporto Olbia-Costa Smeralda, 10 minuti dalla spiaggia."
+    },
+    "washingMachine": {
+      "title": "Lavatrice",
+      "description": "Lavatrice disponibile per la tua comodità durante il soggiorno."
+    },
+    "smartTV": {
+      "title": "Smart TV",
+      "description": "Smart TV per guardare i tuoi film e serie preferite in streaming."
+    },
+    "terrace": {
+      "title": "Terrazzo Arredato",
+      "description": "Spazio esterno attrezzato perfetto per cene all'aperto e momenti di relax."
+    },
+    "heating": {
+      "title": "Riscaldamento",
+      "description": "Riscaldamento in tutte le stanze per il massimo comfort anche in inverno."
+    },
+    "linens": {
+      "title": "Biancheria Inclusa",
+      "description": "Lenzuola, asciugamani e biancheria da cucina forniti e inclusi nel prezzo."
     }
   },
   "gallery": {
