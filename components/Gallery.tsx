@@ -34,7 +34,7 @@ const GALLERY_IMAGES: GalleryImage[] = [
     category: 'Esterni'
   },
   {
-    url: '/terrazzino-1.webp',
+    url: '/terrazzino-1.jpg',
     alt: 'Terrazzo attrezzato per pranzi all\'aperto',
     category: 'Esterni'
   },
