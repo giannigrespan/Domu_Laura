@@ -91,7 +91,7 @@ export const ContactSection: React.FC = () => {
               <h3 className="text-xl font-bold text-gray-900 mb-4">{t('contact.whereWeAre')}</h3>
               <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
                 <iframe
-                  src="https://maps.google.com/maps?q=Via+Lombardia+7,+08020+Torpè+NU&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=Via+Lombardia+7a,+08020+Torpè+NU&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="350"
                   style={{ border: 0 }}
