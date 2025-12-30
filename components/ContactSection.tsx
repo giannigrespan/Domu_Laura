@@ -98,7 +98,7 @@ export const ContactSection: React.FC = () => {
                   allowFullScreen={true}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Mappa di Via Lombardia 7, Torpè"
+                  title="Mappa di Via Lombardia 7a, Torpè"
                 ></iframe>
               </div>
             </div>
