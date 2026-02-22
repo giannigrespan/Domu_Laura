@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
-// L'ID del calendario viene caricato dalle variabili d'ambiente di Vercel
-// Le variabili sono esposte tramite process.env attraverso vite.config.ts
+// Caricamento variabili d'ambiente
 const GOOGLE_CALENDAR_ID = process.env.GOOGLE_CALENDAR_ID;
 const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 
@@ -23,6 +22,14 @@ export const CalendarSection: React.FC = () => {
     fetchCalendarData();
   }, [currentDate]);
 
+  // Funzione helper per formattare la data come YYYY-MM-DD senza offset UTC
+  const formatLocalDate = (date: Date) => {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  };
+
   const fetchCalendarData = async () => {
     if (!GOOGLE_CALENDAR_ID || !GOOGLE_API_KEY) {
       setLoading(false);
@@ -35,23 +42,21 @@ export const CalendarSection: React.FC = () => {
       const year = currentDate.getFullYear();
       const month = currentDate.getMonth();
 
-      // Primo e ultimo giorno del mese
       const firstDay = new Date(year, month, 1);
       const lastDay = new Date(year, month + 1, 0);
 
-      // Calcola il primo giorno da mostrare (lunedì della settimana del primo giorno del mese)
+      // Calcolo inizio (Lunedì) e fine (Domenica) della griglia visibile
       const startDate = new Date(firstDay);
-      const firstDayOfWeek = firstDay.getDay(); // 0 = domenica, 1 = lunedì, ...
-      const daysToSubtract = firstDayOfWeek === 0 ? 6 : firstDayOfWeek - 1; // Lunedì come primo giorno
+      const firstDayOfWeek = firstDay.getDay(); 
+      const daysToSubtract = firstDayOfWeek === 0 ? 6 : firstDayOfWeek - 1;
       startDate.setDate(firstDay.getDate() - daysToSubtract);
 
-      // Calcola l'ultimo giorno da mostrare (domenica della settimana dell'ultimo giorno del mese)
       const endDate = new Date(lastDay);
       const lastDayOfWeek = lastDay.getDay();
       const daysToAdd = lastDayOfWeek === 0 ? 0 : 7 - lastDayOfWeek;
       endDate.setDate(lastDay.getDate() + daysToAdd);
 
-      // Fetch eventi da Google Calendar
+      // Fetch da Google Calendar
       const timeMin = startDate.toISOString();
       const timeMax = endDate.toISOString();
 
@@ -61,13 +66,9 @@ export const CalendarSection: React.FC = () => {
       );
 
       if (!response.ok) {
-        if (response.status === 403) {
-          setError(t('calendar.errors.notAccessible'));
-        } else if (response.status === 404) {
-          setError(t('calendar.errors.notFound'));
-        } else {
-          setError(t('calendar.errors.generic'));
-        }
+        if (response.status === 403) setError(t('calendar.errors.notAccessible'));
+        else if (response.status === 404) setError(t('calendar.errors.notFound'));
+        else setError(t('calendar.errors.generic'));
         setCalendarDays([]);
         return;
       }
@@ -75,18 +76,21 @@ export const CalendarSection: React.FC = () => {
       const data = await response.json();
       const events = data.items || [];
 
-      // Crea array di giorni con stato occupato/libero
       const days: CalendarDay[] = [];
       const currentDateIter = new Date(startDate);
+      // Reset ore per evitare problemi di calcolo
+      currentDateIter.setHours(0, 0, 0, 0);
 
       while (currentDateIter <= endDate) {
-        const dateStr = currentDateIter.toISOString().split('T')[0];
+        const dateStr = formatLocalDate(currentDateIter);
+        
         const hasEvent = events.some((event: any) => {
+          // Gestione date Google: .date per tutto il giorno, .dateTime per orari specifici
           const eventStart = event.start.date || event.start.dateTime?.split('T')[0];
           const eventEnd = event.end.date || event.end.dateTime?.split('T')[0];
 
-          // Controlla se la data corrente cade all'interno dell'intervallo dell'evento
-          // Per gli eventi all-day, l'end date è esclusivo (es: evento dal 5 al 10 ha end=11)
+          // Se è un evento di un solo giorno (all-day), Google mette l'End Date al giorno dopo.
+          // Il confronto 'dateStr < eventEnd' gestisce correttamente l'esclusività del giorno finale.
           return dateStr >= eventStart && dateStr < eventEnd;
         });
 
@@ -100,55 +104,28 @@ export const CalendarSection: React.FC = () => {
       }
 
       setCalendarDays(days);
-      setError(null);
-    } catch (error) {
-      console.error('Errore nel caricamento del calendario:', error);
+    } catch (err) {
+      console.error('Errore caricamento:', err);
       setError(t('calendar.errors.connection'));
-      setCalendarDays([]);
     } finally {
       setLoading(false);
     }
   };
 
   const changeMonth = (offset: number) => {
-    const newDate = new Date(currentDate);
-    newDate.setMonth(newDate.getMonth() + offset);
+    const newDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + offset, 1);
     setCurrentDate(newDate);
   };
 
-  const monthNames = [
-    t('calendar.months.0'),
-    t('calendar.months.1'),
-    t('calendar.months.2'),
-    t('calendar.months.3'),
-    t('calendar.months.4'),
-    t('calendar.months.5'),
-    t('calendar.months.6'),
-    t('calendar.months.7'),
-    t('calendar.months.8'),
-    t('calendar.months.9'),
-    t('calendar.months.10'),
-    t('calendar.months.11')
-  ];
-
-  const dayNames = [
-    t('calendar.days.mon'),
-    t('calendar.days.tue'),
-    t('calendar.days.wed'),
-    t('calendar.days.thu'),
-    t('calendar.days.fri'),
-    t('calendar.days.sat'),
-    t('calendar.days.sun')
-  ];
+  const monthNames = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(m => t(`calendar.months.${m}`));
+  const dayNames = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'].map(d => t(`calendar.days.${d}`));
 
   return (
     <section id="calendar" className="py-8 md:py-16 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-4 md:mb-8">
+        <div className="text-center mb-8">
           <h2 className="text-2xl font-serif font-bold text-gray-900 mb-3">{t('calendar.title')}</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-sm">
-            {t('calendar.subtitle')}
-          </p>
+          <p className="text-gray-600 max-w-2xl mx-auto text-sm">{t('calendar.subtitle')}</p>
         </div>
 
         {!GOOGLE_CALENDAR_ID || !GOOGLE_API_KEY ? (
@@ -157,57 +134,39 @@ export const CalendarSection: React.FC = () => {
           </div>
         ) : (
           <div className="bg-white p-4 rounded-lg shadow-md border border-gray-200 max-w-3xl mx-auto">
-            {/* Header con navigazione mesi */}
+            {/* Navigazione */}
             <div className="flex items-center justify-between mb-4">
-              <button
-                onClick={() => changeMonth(-1)}
-                className="p-1.5 hover:bg-gray-100 rounded-lg transition-colors"
-                aria-label={t('calendar.previousMonth')}
-              >
+              <button onClick={() => changeMonth(-1)} className="p-1.5 hover:bg-gray-100 rounded-lg transition-colors">
                 <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
-
               <h3 className="text-lg font-semibold text-gray-900">
                 {monthNames[currentDate.getMonth()]} {currentDate.getFullYear()}
               </h3>
-
-              <button
-                onClick={() => changeMonth(1)}
-                className="p-1.5 hover:bg-gray-100 rounded-lg transition-colors"
-                aria-label={t('calendar.nextMonth')}
-              >
+              <button onClick={() => changeMonth(1)} className="p-1.5 hover:bg-gray-100 rounded-lg transition-colors">
                 <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
             </div>
 
-            {/* Giorni della settimana */}
+            {/* Giorni Settimana */}
             <div className="grid grid-cols-7 gap-1 mb-1">
               {dayNames.map((day) => (
-                <div key={day} className="text-center font-medium text-gray-600 text-xs py-1">
+                <div key={day} className="text-center font-medium text-gray-600 text-xs py-1 uppercase">
                   {day}
                 </div>
               ))}
             </div>
 
-            {/* Griglia calendario */}
+            {/* Griglia Calendario */}
             {loading ? (
-              <div className="text-center py-8 text-gray-500 text-sm">
-                {t('calendar.loading')}
-              </div>
+              <div className="text-center py-12 text-gray-500 text-sm">{t('calendar.loading')}</div>
             ) : error ? (
-              <div className="bg-red-50 border-2 border-red-200 rounded-lg p-4 text-center">
+              <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-center">
                 <div className="text-red-700 font-semibold mb-1 text-sm">⚠️ {error}</div>
-                <div className="text-red-600 text-xs">
-                  {t('calendar.errors.instructions')}
-                </div>
-              </div>
-            ) : calendarDays.length === 0 ? (
-              <div className="text-center py-8 text-gray-500 text-sm">
-                {t('calendar.noData')}
+                <div className="text-red-600 text-xs">{t('calendar.errors.instructions')}</div>
               </div>
             ) : (
               <div className="grid grid-cols-7 gap-1 sm:gap-1.5">
@@ -217,13 +176,11 @@ export const CalendarSection: React.FC = () => {
                     style={{ minHeight: '44px' }}
                     className={`
                       py-2 px-1 flex items-center justify-center rounded text-sm font-semibold
-                      ${!day.isCurrentMonth ? 'text-gray-400 opacity-60' : ''}
+                      ${!day.isCurrentMonth ? 'opacity-40' : ''}
                       ${day.isOccupied
-                        ? 'bg-red-100 text-red-800 border border-red-400'
-                        : 'bg-green-100 text-green-800 border border-green-400'
+                        ? 'bg-red-100 text-red-800 border border-red-300'
+                        : 'bg-green-100 text-green-800 border border-green-300'
                       }
-                      ${!day.isCurrentMonth && day.isOccupied ? 'bg-red-50 border-red-300' : ''}
-                      ${!day.isCurrentMonth && !day.isOccupied ? 'bg-green-50 border-green-300' : ''}
                     `}
                   >
                     {day.date.getDate()}
@@ -233,13 +190,13 @@ export const CalendarSection: React.FC = () => {
             )}
 
             {/* Legenda */}
-            <div className="flex items-center justify-center gap-4 mt-4 pt-4 border-t border-gray-200">
-              <div className="flex items-center gap-1.5">
-                <div className="w-4 h-4 bg-green-100 border border-green-300 rounded"></div>
+            <div className="flex items-center justify-center gap-6 mt-6 pt-4 border-t border-gray-100">
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 bg-green-100 border border-green-300 rounded-sm"></div>
                 <span className="text-xs text-gray-600">{t('calendar.available')}</span>
               </div>
-              <div className="flex items-center gap-1.5">
-                <div className="w-4 h-4 bg-red-100 border border-red-300 rounded"></div>
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 bg-red-100 border border-red-300 rounded-sm"></div>
                 <span className="text-xs text-gray-600">{t('calendar.occupied')}</span>
               </div>
             </div>
@@ -247,9 +204,7 @@ export const CalendarSection: React.FC = () => {
         )}
 
         <div className="mt-6 text-center">
-          <p className="text-xs text-gray-500 italic">
-            {t('calendar.disclaimer')}
-          </p>
+          <p className="text-xs text-gray-500 italic">{t('calendar.disclaimer')}</p>
         </div>
       </div>
     </section>
