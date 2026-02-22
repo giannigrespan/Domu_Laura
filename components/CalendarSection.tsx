@@ -22,7 +22,7 @@ export const CalendarSection: React.FC = () => {
     fetchCalendarData();
   }, [currentDate]);
 
-  // Funzione helper per formattare la data come YYYY-MM-DD senza offset UTC
+  // Funzione helper per formattare la data come YYYY-MM-DD (locale)
   const formatLocalDate = (date: Date) => {
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, '0');
@@ -45,7 +45,6 @@ export const CalendarSection: React.FC = () => {
       const firstDay = new Date(year, month, 1);
       const lastDay = new Date(year, month + 1, 0);
 
-      // Calcolo inizio (Lunedì) e fine (Domenica) della griglia visibile
       const startDate = new Date(firstDay);
       const firstDayOfWeek = firstDay.getDay(); 
       const daysToSubtract = firstDayOfWeek === 0 ? 6 : firstDayOfWeek - 1;
@@ -56,7 +55,6 @@ export const CalendarSection: React.FC = () => {
       const daysToAdd = lastDayOfWeek === 0 ? 0 : 7 - lastDayOfWeek;
       endDate.setDate(lastDay.getDate() + daysToAdd);
 
-      // Fetch da Google Calendar
       const timeMin = startDate.toISOString();
       const timeMax = endDate.toISOString();
 
@@ -78,20 +76,24 @@ export const CalendarSection: React.FC = () => {
 
       const days: CalendarDay[] = [];
       const currentDateIter = new Date(startDate);
-      // Reset ore per evitare problemi di calcolo
       currentDateIter.setHours(0, 0, 0, 0);
 
       while (currentDateIter <= endDate) {
         const dateStr = formatLocalDate(currentDateIter);
         
         const hasEvent = events.some((event: any) => {
-          // Gestione date Google: .date per tutto il giorno, .dateTime per orari specifici
+          // Determiniamo se è un evento "Tutto il giorno" (ha .date) o con orario (.dateTime)
+          const isAllDay = !!event.start.date;
           const eventStart = event.start.date || event.start.dateTime?.split('T')[0];
           const eventEnd = event.end.date || event.end.dateTime?.split('T')[0];
 
-          // Se è un evento di un solo giorno (all-day), Google mette l'End Date al giorno dopo.
-          // Il confronto 'dateStr < eventEnd' gestisce correttamente l'esclusività del giorno finale.
-          return dateStr >= eventStart && dateStr < eventEnd;
+          if (isAllDay) {
+            // Per gli eventi "Tutto il giorno", la fine è esclusiva (es: 12-15 ha end=16)
+            return dateStr >= eventStart && dateStr < eventEnd;
+          } else {
+            // Per gli eventi con orario, usiamo <= per includere il giorno di fine (es: 12-15 ha end=15)
+            return dateStr >= eventStart && dateStr <= eventEnd;
+          }
         });
 
         days.push({
@@ -134,7 +136,6 @@ export const CalendarSection: React.FC = () => {
           </div>
         ) : (
           <div className="bg-white p-4 rounded-lg shadow-md border border-gray-200 max-w-3xl mx-auto">
-            {/* Navigazione */}
             <div className="flex items-center justify-between mb-4">
               <button onClick={() => changeMonth(-1)} className="p-1.5 hover:bg-gray-100 rounded-lg transition-colors">
                 <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -151,7 +152,6 @@ export const CalendarSection: React.FC = () => {
               </button>
             </div>
 
-            {/* Giorni Settimana */}
             <div className="grid grid-cols-7 gap-1 mb-1">
               {dayNames.map((day) => (
                 <div key={day} className="text-center font-medium text-gray-600 text-xs py-1 uppercase">
@@ -160,7 +160,6 @@ export const CalendarSection: React.FC = () => {
               ))}
             </div>
 
-            {/* Griglia Calendario */}
             {loading ? (
               <div className="text-center py-12 text-gray-500 text-sm">{t('calendar.loading')}</div>
             ) : error ? (
@@ -189,7 +188,6 @@ export const CalendarSection: React.FC = () => {
               </div>
             )}
 
-            {/* Legenda */}
             <div className="flex items-center justify-center gap-6 mt-6 pt-4 border-t border-gray-100">
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 bg-green-100 border border-green-300 rounded-sm"></div>
